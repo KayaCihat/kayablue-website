@@ -1,0 +1,264 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+<BaseLayout title="Services" description="Kayablue — Architectural digital solutions engineered for scale, security, and performance">
+
+  <!-- Hero -->
+  <section class="svc-hero">
+    <div class="container">
+      <h1 class="svc-hero__heading">Architectural Digital Solutions</h1>
+      <p class="svc-hero__desc">We engineer high-performance infrastructures designed for scale, security, and technical prestige. Precision is not a goal; it is our foundation.</p>
+    </div>
+  </section>
+
+  <!-- Methodology -->
+  <section class="methodology">
+    <div class="container">
+      <p class="methodology__label">Our Methodology</p>
+      <h2 class="methodology__heading">Precision Engineered For Performance</h2>
+      <p class="methodology__desc">We construct robust digital systems using advanced technical frameworks tailored to industry-specific challenges.</p>
+      <div class="methodology__pillars">
+        <div class="pillar">
+          <h3 class="pillar__title">Structural Integrity</h3>
+          <p class="pillar__desc">Built for 99.9% uptime and zero-latency performance.</p>
+        </div>
+        <div class="pillar">
+          <h3 class="pillar__title">Industry Specificity</h3>
+          <p class="pillar__desc">Custom modules designed for Real Estate, Finance, and Staffing.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services -->
+  <section class="services">
+    <div class="container">
+      <div class="service-block">
+        <div class="service-block__number">01</div>
+        <div class="service-block__body">
+          <h2 class="service-block__title">Real Estate Ecosystems</h2>
+          <p class="service-block__desc">Deep integration for property professionals. We build PropTech platforms that synchronise with global listing services and nurture leads automatically.</p>
+          <ul class="service-block__features">
+            <li>PropTech Platform Development</li>
+            <li>Global MLS Sync</li>
+            <li>Lead Nurture Loops</li>
+            <li>Virtual Tour Integration</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="service-block">
+        <div class="service-block__number">02</div>
+        <div class="service-block__body">
+          <h2 class="service-block__title">Finance Architecture</h2>
+          <p class="service-block__desc">Security-first design with sub-50ms latency. We build compliant fintech infrastructure that handles high-volume transactions with confidence.</p>
+          <ul class="service-block__features">
+            <li>Low-Latency API Design</li>
+            <li>End-to-End Encryption</li>
+            <li>Regulatory Compliance Guardrails</li>
+            <li>Analytics &amp; Predictive Modelling</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="service-block">
+        <div class="service-block__number">03</div>
+        <div class="service-block__body">
+          <h2 class="service-block__title">Staffing Portals</h2>
+          <p class="service-block__desc">Scalable infrastructure for recruitment at speed. Our portals automate the mundane so your team can focus on what matters — people.</p>
+          <ul class="service-block__features">
+            <li>High-Volume ATS</li>
+            <li>AI-Powered Matching Algorithms</li>
+            <li>Dynamic Shift Management</li>
+            <li>Candidate Self-Service Portals</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Impact -->
+  <section class="impact">
+    <div class="container impact__inner">
+      <div class="impact__stats">
+        <div class="stat">
+          <span class="stat__value">45ms</span>
+          <span class="stat__label">Average Latency Drop</span>
+        </div>
+        <div class="stat">
+          <span class="stat__value">300%</span>
+          <span class="stat__label">Capacity Growth</span>
+        </div>
+        <div class="stat">
+          <span class="stat__value">99.9%</span>
+          <span class="stat__label">Uptime SLA</span>
+        </div>
+      </div>
+      <div class="impact__cta">
+        <h2 class="impact__heading">Driving 300% Scale Growth</h2>
+        <p class="impact__desc">Our engineering methodology delivers measurable results across every vertical we serve.</p>
+        <a href="/book-a-call" class="btn btn--primary">Schedule Your Strategy Session</a>
+      </div>
+    </div>
+  </section>
+
+</BaseLayout>
+
+<style>
+  .btn {
+    display: inline-block;
+    padding: 0.75rem 1.75rem;
+    border-radius: var(--radius);
+    font-weight: 600;
+    font-size: 0.95rem;
+    transition: opacity 0.2s, transform 0.2s;
+    cursor: pointer;
+  }
+  .btn:hover { opacity: 0.85; transform: translateY(-1px); }
+  .btn--primary { background: var(--color-accent); color: #fff; }
+
+  .svc-hero {
+    padding: 6rem 0 4rem;
+    border-bottom: 1px solid var(--color-border);
+  }
+  .svc-hero__heading {
+    font-size: clamp(2rem, 5vw, 3.5rem);
+    font-weight: 800;
+    line-height: 1.15;
+    margin-bottom: 1.5rem;
+    max-width: 700px;
+  }
+  .svc-hero__desc {
+    font-size: 1.15rem;
+    color: var(--color-text-muted);
+    max-width: 620px;
+    line-height: 1.7;
+  }
+
+  .methodology {
+    padding: 5rem 0;
+    background: var(--color-bg-secondary);
+    border-bottom: 1px solid var(--color-border);
+  }
+  .methodology__label {
+    font-size: 0.8rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--color-accent);
+    margin-bottom: 0.75rem;
+  }
+  .methodology__heading {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+  }
+  .methodology__desc {
+    color: var(--color-text-muted);
+    max-width: 560px;
+    line-height: 1.7;
+    margin-bottom: 2.5rem;
+  }
+  .methodology__pillars {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+    gap: 1.5rem;
+  }
+  .pillar {
+    padding: 1.75rem;
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius);
+    background: var(--color-bg);
+  }
+  .pillar__title { font-size: 1rem; font-weight: 700; margin-bottom: 0.5rem; }
+  .pillar__desc { color: var(--color-text-muted); font-size: 0.9rem; }
+
+  .services { padding: 5rem 0; }
+  .service-block {
+    display: grid;
+    grid-template-columns: 80px 1fr;
+    gap: 2rem;
+    padding: 3rem 0;
+    border-bottom: 1px solid var(--color-border);
+  }
+  .service-block:last-child { border-bottom: none; }
+  .service-block__number {
+    font-size: 2.5rem;
+    font-weight: 800;
+    opacity: 0.15;
+    line-height: 1;
+    padding-top: 0.25rem;
+  }
+  .service-block__title {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+  }
+  .service-block__desc {
+    color: var(--color-text-muted);
+    line-height: 1.7;
+    margin-bottom: 1.5rem;
+  }
+  .service-block__features {
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 0.5rem;
+  }
+  .service-block__features li {
+    font-size: 0.9rem;
+    color: var(--color-text-muted);
+    padding-left: 1.25rem;
+    position: relative;
+  }
+  .service-block__features li::before {
+    content: '→';
+    position: absolute;
+    left: 0;
+    color: var(--color-accent);
+  }
+
+  .impact {
+    padding: 5rem 0;
+    background: var(--color-bg-secondary);
+  }
+  .impact__inner {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: center;
+  }
+  .impact__stats {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
+  .stat__value {
+    display: block;
+    font-size: 3rem;
+    font-weight: 800;
+    color: var(--color-accent);
+    line-height: 1;
+  }
+  .stat__label {
+    font-size: 0.9rem;
+    color: var(--color-text-muted);
+    margin-top: 0.25rem;
+  }
+  .impact__heading {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+  }
+  .impact__desc {
+    color: var(--color-text-muted);
+    line-height: 1.7;
+    margin-bottom: 2rem;
+  }
+
+  @media (max-width: 700px) {
+    .service-block { grid-template-columns: 1fr; }
+    .service-block__number { font-size: 1.5rem; }
+    .impact__inner { grid-template-columns: 1fr; }
+  }
+</style>

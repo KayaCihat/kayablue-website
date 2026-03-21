@@ -1,0 +1,233 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+<BaseLayout title="About" description="Kayablue — Architects of high-performance digital experiences">
+
+  <!-- Hero -->
+  <section class="about-hero">
+    <div class="container">
+      <h1 class="about-hero__heading">Architects of the Digital Frontier</h1>
+      <p class="about-hero__desc">We believe the digital frontier is the canvas for modern legacies. Kayablue engineers high-performance systems that dominate markets through architectural precision and creative problem-solving.</p>
+    </div>
+  </section>
+
+  <!-- Mission & Values -->
+  <section class="values">
+    <div class="container">
+      <h2 class="section-title">Core Values</h2>
+      <div class="values__grid">
+        <div class="value-card">
+          <div class="value-card__icon">💡</div>
+          <h3 class="value-card__title">Innovation</h3>
+          <p class="value-card__desc">We continuously expand technical boundaries, adopting emerging frameworks and methodologies before they become mainstream.</p>
+        </div>
+        <div class="value-card">
+          <div class="value-card__icon">🎯</div>
+          <h3 class="value-card__title">Precision</h3>
+          <p class="value-card__desc">Every line of code and every pixel is placed with intention. We hold ourselves to an exacting standard because your business deserves it.</p>
+        </div>
+        <div class="value-card">
+          <div class="value-card__icon">📈</div>
+          <h3 class="value-card__title">Impact</h3>
+          <p class="value-card__desc">We measure success in measurable growth, digital authority, and the tangible results our clients see in their bottom line.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Methodology -->
+  <section class="methodology">
+    <div class="container">
+      <h2 class="section-title">Our Methodology</h2>
+      <div class="phases">
+        <div class="phase">
+          <div class="phase__step">01</div>
+          <div class="phase__body">
+            <h3 class="phase__title">Discovery</h3>
+            <p class="phase__desc">We analyse your business ecosystem to identify untapped opportunities, technical gaps, and the competitive landscape that defines your path forward.</p>
+          </div>
+        </div>
+        <div class="phase">
+          <div class="phase__step">02</div>
+          <div class="phase__body">
+            <h3 class="phase__title">Design</h3>
+            <p class="phase__desc">We create visual systems that are deeply aligned with your brand identity — not generic templates, but bespoke digital architectures built from the ground up.</p>
+          </div>
+        </div>
+        <div class="phase">
+          <div class="phase__step">03</div>
+          <div class="phase__body">
+            <h3 class="phase__title">Execution</h3>
+            <p class="phase__desc">We engineer and deploy scalable solutions with precision timelines, transparent communication, and a relentless focus on performance.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Team -->
+  <section class="team">
+    <div class="container">
+      <h2 class="section-title">Our Leadership</h2>
+      <div class="team__grid">
+        <div class="team-card">
+          <div class="team-card__avatar">ET</div>
+          <h3 class="team-card__name">Elias Thorne</h3>
+          <p class="team-card__role">Founder &amp; CEO</p>
+        </div>
+        <div class="team-card">
+          <div class="team-card__avatar">EV</div>
+          <h3 class="team-card__name">Elena Vance</h3>
+          <p class="team-card__role">Chief Technology Officer</p>
+        </div>
+        <div class="team-card">
+          <div class="team-card__avatar">MC</div>
+          <h3 class="team-card__name">Marcus Chen</h3>
+          <p class="team-card__role">Design Director</p>
+        </div>
+        <div class="team-card">
+          <div class="team-card__avatar">SJ</div>
+          <h3 class="team-card__name">Sarah Jenkins</h3>
+          <p class="team-card__role">Head of Strategy</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="cta-section">
+    <div class="container cta-section__inner">
+      <h2 class="cta-section__heading">Work with Kayablue</h2>
+      <p class="cta-section__desc">Let's build something exceptional together. Reach out to start the conversation.</p>
+      <a href="/book-a-call" class="btn btn--primary">Book a Strategy Call</a>
+    </div>
+  </section>
+
+</BaseLayout>
+
+<style>
+  .btn {
+    display: inline-block;
+    padding: 0.75rem 1.75rem;
+    border-radius: var(--radius);
+    font-weight: 600;
+    font-size: 0.95rem;
+    transition: opacity 0.2s, transform 0.2s;
+  }
+  .btn:hover { opacity: 0.85; transform: translateY(-1px); }
+  .btn--primary { background: var(--color-accent); color: #fff; }
+
+  .about-hero {
+    padding: 6rem 0 4rem;
+    border-bottom: 1px solid var(--color-border);
+  }
+  .about-hero__heading {
+    font-size: clamp(2rem, 5vw, 3.25rem);
+    font-weight: 800;
+    line-height: 1.15;
+    margin-bottom: 1.5rem;
+    max-width: 700px;
+  }
+  .about-hero__desc {
+    font-size: 1.15rem;
+    color: var(--color-text-muted);
+    max-width: 640px;
+    line-height: 1.7;
+  }
+
+  .values, .methodology { padding: 5rem 0; }
+  .methodology { background: var(--color-bg-secondary); border-top: 1px solid var(--color-border); border-bottom: 1px solid var(--color-border); }
+
+  .section-title {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 2.5rem;
+  }
+
+  .values__grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+    gap: 1.5rem;
+  }
+  .value-card {
+    padding: 2rem;
+    background: var(--color-bg-secondary);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius);
+    transition: border-color 0.2s;
+  }
+  .value-card:hover { border-color: var(--color-accent); }
+  .value-card__icon { font-size: 2rem; margin-bottom: 1rem; }
+  .value-card__title { font-size: 1.05rem; font-weight: 700; margin-bottom: 0.75rem; }
+  .value-card__desc { color: var(--color-text-muted); line-height: 1.6; font-size: 0.9rem; }
+
+  .phases { display: flex; flex-direction: column; gap: 0; }
+  .phase {
+    display: grid;
+    grid-template-columns: 60px 1fr;
+    gap: 2rem;
+    padding: 2.5rem 0;
+    border-bottom: 1px solid var(--color-border);
+  }
+  .phase:last-child { border-bottom: none; }
+  .phase__step {
+    font-size: 2rem;
+    font-weight: 800;
+    opacity: 0.2;
+    line-height: 1;
+  }
+  .phase__title { font-size: 1.15rem; font-weight: 700; margin-bottom: 0.75rem; }
+  .phase__desc { color: var(--color-text-muted); line-height: 1.7; }
+
+  .team { padding: 5rem 0; }
+  .team__grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 1.5rem;
+  }
+  .team-card {
+    padding: 2rem;
+    background: var(--color-bg-secondary);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius);
+    text-align: center;
+    transition: border-color 0.2s;
+  }
+  .team-card:hover { border-color: var(--color-accent); }
+  .team-card__avatar {
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+    background: var(--color-accent);
+    color: #fff;
+    font-weight: 700;
+    font-size: 1.1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 1.25rem;
+  }
+  .team-card__name { font-size: 1rem; font-weight: 700; margin-bottom: 0.4rem; }
+  .team-card__role { font-size: 0.85rem; color: var(--color-text-muted); }
+
+  .cta-section {
+    padding: 5rem 0;
+    text-align: center;
+    background: var(--color-bg-secondary);
+    border-top: 1px solid var(--color-border);
+  }
+  .cta-section__heading { font-size: 2.25rem; font-weight: 800; margin-bottom: 1rem; }
+  .cta-section__desc {
+    color: var(--color-text-muted);
+    font-size: 1.1rem;
+    margin-bottom: 2rem;
+    max-width: 480px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  @media (max-width: 600px) {
+    .phase { grid-template-columns: 1fr; }
+    .phase__step { font-size: 1.25rem; }
+  }
+</style>

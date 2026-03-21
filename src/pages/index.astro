@@ -1,6 +1,266 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
 ---
-<BaseLayout title="Home">
-  <h1 style="padding: 4rem 2rem;">Kayablue</h1>
+<BaseLayout title="Home" description="Kayablue — Premium web solutions for real estate, staffing, and finance professionals">
+
+  <!-- Hero -->
+  <section class="hero">
+    <div class="container hero__inner">
+      <div class="hero__content">
+        <h1 class="hero__heading">Premium Web Solutions</h1>
+        <p class="hero__sub">Websites that work as hard as your business</p>
+        <p class="hero__desc">High-converting digital experiences for real estate, staffing, and finance professionals.</p>
+        <div class="hero__actions">
+          <a href="/book-a-call" class="btn btn--primary">Book a Free Call</a>
+          <a href="/our-work" class="btn btn--ghost">View Our Work</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Industries We Serve -->
+  <section class="industries">
+    <div class="container">
+      <h2 class="section-title">Industries We Serve</h2>
+      <div class="industries__grid">
+        <div class="industry-card">
+          <div class="industry-card__icon">🏢</div>
+          <h3 class="industry-card__title">Real Estate</h3>
+          <p class="industry-card__desc">High-impact property listings and automated lead generation funnels that convert visitors into clients.</p>
+        </div>
+        <div class="industry-card">
+          <div class="industry-card__icon">👥</div>
+          <h3 class="industry-card__title">Staffing Agencies</h3>
+          <p class="industry-card__desc">Custom recruitment portals with applicant tracking that streamline your hiring pipeline.</p>
+        </div>
+        <div class="industry-card">
+          <div class="industry-card__icon">💼</div>
+          <h3 class="industry-card__title">Finance</h3>
+          <p class="industry-card__desc">Secure fintech solutions emphasizing trust, compliance, and seamless client experiences.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Recent Work -->
+  <section class="recent-work">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title">Our Recent Work</h2>
+        <a href="/our-work" class="btn btn--ghost">View All Projects</a>
+      </div>
+      <div class="work-grid">
+        <div class="work-card">
+          <div class="work-card__badge">Real Estate</div>
+          <h3 class="work-card__title">Skyline Properties</h3>
+          <p class="work-card__desc">Direct Booking &amp; CRM — Luxury listing platform with immersive lead generation funnels.</p>
+        </div>
+        <div class="work-card">
+          <div class="work-card__badge">Staffing</div>
+          <h3 class="work-card__title">TalentFlow Portal</h3>
+          <p class="work-card__desc">Applicant Tracking System — Recruitment dashboard managing 10k+ active candidates.</p>
+        </div>
+        <div class="work-card">
+          <div class="work-card__badge">Finance</div>
+          <h3 class="work-card__title">Vantage Wealth</h3>
+          <p class="work-card__desc">Asset Tracking Platform — Premium asset management with real-time market data.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials -->
+  <section class="testimonials">
+    <div class="container">
+      <h2 class="section-title">Trusted by industry leaders</h2>
+      <div class="testimonials__grid">
+        <blockquote class="testimonial">
+          <p class="testimonial__text">"Working with Kayablue transformed our online presence. We saw a 40% increase in qualified inquiries within the first month."</p>
+          <footer class="testimonial__author">— Marcus Chen, Skyline Properties CEO</footer>
+        </blockquote>
+        <blockquote class="testimonial">
+          <p class="testimonial__text">"The recruitment portal they built saved our team dozens of hours each week. The interface is intuitive and our clients love it."</p>
+          <footer class="testimonial__author">— Sarah Jenkins, TalentFlow CTO</footer>
+        </blockquote>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="cta-section">
+    <div class="container cta-section__inner">
+      <h2 class="cta-section__heading">Ready to scale your digital presence?</h2>
+      <p class="cta-section__desc">Let us build a custom digital experience that drives real results for your business.</p>
+      <a href="/book-a-call" class="btn btn--primary btn--lg">Schedule Your Strategy Session</a>
+    </div>
+  </section>
+
 </BaseLayout>
+
+<style>
+  /* Hero */
+  .hero {
+    padding: 6rem 0 5rem;
+    background: linear-gradient(135deg, var(--color-bg) 0%, var(--color-bg-secondary) 100%);
+    border-bottom: 1px solid var(--color-border);
+  }
+  .hero__inner {
+    max-width: 720px;
+  }
+  .hero__heading {
+    font-size: clamp(2.5rem, 6vw, 4rem);
+    font-weight: 800;
+    line-height: 1.1;
+    margin-bottom: 1rem;
+  }
+  .hero__sub {
+    font-size: 1.25rem;
+    color: var(--color-accent);
+    font-weight: 600;
+    margin-bottom: 1rem;
+  }
+  .hero__desc {
+    font-size: 1.1rem;
+    color: var(--color-text-muted);
+    margin-bottom: 2.5rem;
+    max-width: 560px;
+  }
+  .hero__actions {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+  }
+
+  /* Buttons */
+  .btn {
+    display: inline-block;
+    padding: 0.75rem 1.75rem;
+    border-radius: var(--radius);
+    font-weight: 600;
+    font-size: 0.95rem;
+    transition: opacity 0.2s, transform 0.2s;
+    cursor: pointer;
+    border: 2px solid transparent;
+  }
+  .btn:hover { opacity: 0.85; transform: translateY(-1px); }
+  .btn--primary {
+    background: var(--color-accent);
+    color: #fff;
+  }
+  .btn--ghost {
+    border-color: var(--color-border);
+    color: var(--color-text);
+  }
+  .btn--ghost:hover { border-color: var(--color-accent); }
+  .btn--lg { padding: 1rem 2.25rem; font-size: 1.05rem; }
+
+  /* Sections */
+  .industries, .recent-work, .testimonials {
+    padding: 5rem 0;
+  }
+  .section-title {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 2.5rem;
+  }
+  .section-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-bottom: 2.5rem;
+  }
+  .section-header .section-title { margin-bottom: 0; }
+
+  /* Industry cards */
+  .industries__grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 1.5rem;
+  }
+  .industry-card {
+    padding: 2rem;
+    background: var(--color-bg-secondary);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius);
+    transition: border-color 0.2s;
+  }
+  .industry-card:hover { border-color: var(--color-accent); }
+  .industry-card__icon { font-size: 2rem; margin-bottom: 1rem; }
+  .industry-card__title { font-size: 1.1rem; font-weight: 700; margin-bottom: 0.75rem; }
+  .industry-card__desc { color: var(--color-text-muted); line-height: 1.6; }
+
+  /* Work grid */
+  .work-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 1.5rem;
+  }
+  .work-card {
+    padding: 2rem;
+    background: var(--color-bg-secondary);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius);
+    transition: border-color 0.2s;
+  }
+  .work-card:hover { border-color: var(--color-accent); }
+  .work-card__badge {
+    display: inline-block;
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: var(--color-accent);
+    border: 1px solid var(--color-accent);
+    border-radius: 4px;
+    padding: 0.2rem 0.6rem;
+    margin-bottom: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+  }
+  .work-card__title { font-size: 1.1rem; font-weight: 700; margin-bottom: 0.75rem; }
+  .work-card__desc { color: var(--color-text-muted); line-height: 1.6; font-size: 0.9rem; }
+
+  /* Testimonials */
+  .testimonials { background: var(--color-bg-secondary); }
+  .testimonials__grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 1.5rem;
+  }
+  .testimonial {
+    padding: 2rem;
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius);
+    background: var(--color-bg);
+  }
+  .testimonial__text {
+    color: var(--color-text-muted);
+    line-height: 1.7;
+    font-style: italic;
+    margin-bottom: 1.25rem;
+  }
+  .testimonial__author {
+    font-weight: 600;
+    font-size: 0.9rem;
+    color: var(--color-accent);
+  }
+
+  /* CTA Section */
+  .cta-section {
+    padding: 5rem 0;
+    text-align: center;
+  }
+  .cta-section__heading {
+    font-size: 2.25rem;
+    font-weight: 800;
+    margin-bottom: 1rem;
+  }
+  .cta-section__desc {
+    color: var(--color-text-muted);
+    font-size: 1.1rem;
+    margin-bottom: 2rem;
+    max-width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+</style>

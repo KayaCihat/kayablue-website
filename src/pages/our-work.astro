@@ -1,0 +1,151 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import PortfolioCard from '../components/PortfolioCard.astro';
+import { portfolio } from '../data/portfolio';
+---
+<BaseLayout title="Our Work" description="Client projects designed by Kayablue">
+
+  <!-- Page Header -->
+  <section class="work-hero">
+    <div class="container">
+      <h1 class="work-hero__heading">Our Work</h1>
+      <p class="work-hero__desc">Real websites, real results. We build digital architecture that transforms businesses into industry leaders.</p>
+    </div>
+  </section>
+
+  <!-- Portfolio Grid -->
+  <section class="container portfolio-grid">
+    {portfolio.map(item => <PortfolioCard item={item} />)}
+  </section>
+
+  <!-- Testimonials -->
+  <section class="testimonials">
+    <div class="container">
+      <h2 class="section-title">Voices of Success</h2>
+      <div class="testimonials__grid">
+        <blockquote class="testimonial">
+          <p class="testimonial__text">"The platform Kayablue built transformed our sales pipeline. Our agents now close deals faster than ever before."</p>
+          <footer class="testimonial__author">— Marcus Chen, Skyline Properties CEO</footer>
+        </blockquote>
+        <blockquote class="testimonial">
+          <p class="testimonial__text">"The recruitment dashboard handles our entire candidate pipeline with ease. Kayablue delivered exactly what we needed."</p>
+          <footer class="testimonial__author">— Sarah Jenkins, TalentFlow CTO</footer>
+        </blockquote>
+        <blockquote class="testimonial">
+          <p class="testimonial__text">"Our clients love the new portal. Real-time data and a clean interface — exactly what a wealth management platform needs."</p>
+          <footer class="testimonial__author">— David Vorne, Vantage Wealth Director</footer>
+        </blockquote>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="cta-section">
+    <div class="container cta-section__inner">
+      <h2 class="cta-section__heading">Ready to build your legacy?</h2>
+      <p class="cta-section__desc">Join the industry leaders who trust Kayablue to power their digital presence.</p>
+      <div class="cta-section__actions">
+        <a href="/book-a-call" class="btn btn--primary">Start Your Project</a>
+        <a href="/services" class="btn btn--ghost">View Services</a>
+      </div>
+    </div>
+  </section>
+
+</BaseLayout>
+
+<style>
+  .btn {
+    display: inline-block;
+    padding: 0.75rem 1.75rem;
+    border-radius: var(--radius);
+    font-weight: 600;
+    font-size: 0.95rem;
+    transition: opacity 0.2s, transform 0.2s;
+    border: 2px solid transparent;
+  }
+  .btn:hover { opacity: 0.85; transform: translateY(-1px); }
+  .btn--primary { background: var(--color-accent); color: #fff; }
+  .btn--ghost { border-color: var(--color-border); color: var(--color-text); }
+  .btn--ghost:hover { border-color: var(--color-accent); }
+
+  .work-hero {
+    padding: 6rem 0 4rem;
+    border-bottom: 1px solid var(--color-border);
+  }
+  .work-hero__heading {
+    font-size: clamp(2.5rem, 6vw, 3.5rem);
+    font-weight: 800;
+    margin-bottom: 1rem;
+  }
+  .work-hero__desc {
+    font-size: 1.15rem;
+    color: var(--color-text-muted);
+    max-width: 600px;
+    line-height: 1.7;
+  }
+
+  .portfolio-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    gap: var(--spacing-lg);
+    padding-top: var(--spacing-xl);
+    padding-bottom: var(--spacing-xl);
+  }
+
+  .testimonials {
+    padding: 5rem 0;
+    background: var(--color-bg-secondary);
+    border-top: 1px solid var(--color-border);
+  }
+  .section-title {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 2.5rem;
+  }
+  .testimonials__grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 1.5rem;
+  }
+  .testimonial {
+    padding: 2rem;
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius);
+    background: var(--color-bg);
+  }
+  .testimonial__text {
+    color: var(--color-text-muted);
+    line-height: 1.7;
+    font-style: italic;
+    margin-bottom: 1.25rem;
+  }
+  .testimonial__author {
+    font-weight: 600;
+    font-size: 0.9rem;
+    color: var(--color-accent);
+  }
+
+  .cta-section {
+    padding: 5rem 0;
+    text-align: center;
+  }
+  .cta-section__heading {
+    font-size: 2.25rem;
+    font-weight: 800;
+    margin-bottom: 1rem;
+  }
+  .cta-section__desc {
+    color: var(--color-text-muted);
+    font-size: 1.1rem;
+    margin-bottom: 2rem;
+    max-width: 480px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .cta-section__actions {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+</style>

@@ -1,0 +1,241 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+<BaseLayout title="Industries" description="Kayablue — Bespoke digital solutions for real estate, staffing, and finance sectors">
+
+  <!-- Hero -->
+  <section class="ind-hero">
+    <div class="container">
+      <p class="ind-hero__label">Sectors of Expertise</p>
+      <h1 class="ind-hero__heading">Industries We Transform</h1>
+      <p class="ind-hero__desc">We engineer bespoke digital architectures for sectors where precision, security, and scalability are non-negotiable. Our solutions aren't just platforms — they're competitive advantages.</p>
+    </div>
+  </section>
+
+  <!-- Real Estate -->
+  <section class="industry-section">
+    <div class="container">
+      <div class="industry-section__inner">
+        <div class="industry-section__header">
+          <div class="industry-section__badge">Real Estate</div>
+          <h2 class="industry-section__title">PropTech &amp; Property Platforms</h2>
+          <p class="industry-section__desc">Advanced property management systems and immersive digital experiences that accelerate liquidity and simplify asset oversight.</p>
+        </div>
+        <div class="industry-section__features">
+          <div class="feature">
+            <h3 class="feature__title">Asset Dashboards</h3>
+            <p class="feature__desc">Real-time portfolio tracking with integrated IoT data feeds.</p>
+          </div>
+          <div class="feature">
+            <h3 class="feature__title">Virtual Showcasing</h3>
+            <p class="feature__desc">High-performance 3D tours and spatial visualisations.</p>
+          </div>
+          <div class="feature">
+            <h3 class="feature__title">MLS Integration</h3>
+            <p class="feature__desc">Seamless data synchronisation across global listing services.</p>
+          </div>
+          <div class="feature">
+            <h3 class="feature__title">Smart Contracts</h3>
+            <p class="feature__desc">Automated leasing agreements and payment escrows.</p>
+          </div>
+        </div>
+        <div class="industry-section__stat">
+          <span class="stat-value">$450M+</span>
+          <span class="stat-label">Transactions processed through Kayablue-built enterprise architectures since 2021</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Staffing -->
+  <section class="industry-section industry-section--alt">
+    <div class="container">
+      <div class="industry-section__inner">
+        <div class="industry-section__header">
+          <div class="industry-section__badge">Staffing</div>
+          <h2 class="industry-section__title">Recruitment &amp; Talent Platforms</h2>
+          <p class="industry-section__desc">Deploying high-frequency recruitment engines that automate the mundane and elevate human potential.</p>
+        </div>
+        <div class="industry-section__features">
+          <div class="feature">
+            <h3 class="feature__title">Automated ATS Workflows</h3>
+            <p class="feature__desc">End-to-end automation from job post to hire with no manual bottlenecks.</p>
+          </div>
+          <div class="feature">
+            <h3 class="feature__title">AI-Powered Candidate Matching</h3>
+            <p class="feature__desc">Intelligent algorithms that surface the right candidates in seconds.</p>
+          </div>
+          <div class="feature">
+            <h3 class="feature__title">Dynamic Shift Management</h3>
+            <p class="feature__desc">Real-time scheduling tools for high-volume temporary staffing operations.</p>
+          </div>
+          <div class="feature">
+            <h3 class="feature__title">Client Portals</h3>
+            <p class="feature__desc">White-label hiring portals your clients access directly.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Finance -->
+  <section class="industry-section">
+    <div class="container">
+      <div class="industry-section__inner">
+        <div class="industry-section__header">
+          <div class="industry-section__badge">Finance</div>
+          <h2 class="industry-section__title">FinTech &amp; Financial Infrastructure</h2>
+          <p class="industry-section__desc">Secure, bank-grade digital infrastructure designed for rigorous regulatory environments and high-volume operations.</p>
+        </div>
+        <div class="industry-section__features">
+          <div class="feature">
+            <h3 class="feature__title">Compliance &amp; Regulatory Guardrails</h3>
+            <p class="feature__desc">Built-in compliance tooling for GDPR, FCA, SEC, and regional frameworks.</p>
+          </div>
+          <div class="feature">
+            <h3 class="feature__title">Security &amp; Encryption</h3>
+            <p class="feature__desc">End-to-end encryption across every data layer and transaction flow.</p>
+          </div>
+          <div class="feature">
+            <h3 class="feature__title">Analytics &amp; Predictive Modelling</h3>
+            <p class="feature__desc">Real-time dashboards with forecasting capabilities for financial decision-making.</p>
+          </div>
+          <div class="feature">
+            <h3 class="feature__title">Legacy ERP Bridges</h3>
+            <p class="feature__desc">Seamless integration with existing enterprise resource systems.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="cta-section">
+    <div class="container cta-section__inner">
+      <h2 class="cta-section__heading">Ready to Scale Your Industry Reach?</h2>
+      <p class="cta-section__desc">Whether you're in specialised real estate or high-compliance financial services, our roadmap starts with your objectives.</p>
+      <a href="/book-a-call" class="btn btn--primary">Start Your Project</a>
+    </div>
+  </section>
+
+</BaseLayout>
+
+<style>
+  .btn {
+    display: inline-block;
+    padding: 0.75rem 1.75rem;
+    border-radius: var(--radius);
+    font-weight: 600;
+    font-size: 0.95rem;
+    transition: opacity 0.2s, transform 0.2s;
+  }
+  .btn:hover { opacity: 0.85; transform: translateY(-1px); }
+  .btn--primary { background: var(--color-accent); color: #fff; }
+
+  .ind-hero {
+    padding: 6rem 0 4rem;
+    border-bottom: 1px solid var(--color-border);
+  }
+  .ind-hero__label {
+    font-size: 0.8rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--color-accent);
+    margin-bottom: 0.75rem;
+  }
+  .ind-hero__heading {
+    font-size: clamp(2rem, 5vw, 3.25rem);
+    font-weight: 800;
+    line-height: 1.15;
+    margin-bottom: 1.5rem;
+    max-width: 680px;
+  }
+  .ind-hero__desc {
+    font-size: 1.1rem;
+    color: var(--color-text-muted);
+    max-width: 640px;
+    line-height: 1.7;
+  }
+
+  .industry-section { padding: 5rem 0; border-bottom: 1px solid var(--color-border); }
+  .industry-section--alt { background: var(--color-bg-secondary); }
+  .industry-section:last-of-type { border-bottom: none; }
+
+  .industry-section__badge {
+    display: inline-block;
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--color-accent);
+    border: 1px solid var(--color-accent);
+    border-radius: 4px;
+    padding: 0.2rem 0.6rem;
+    margin-bottom: 1rem;
+  }
+  .industry-section__title {
+    font-size: 1.75rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+  }
+  .industry-section__desc {
+    font-size: 1.05rem;
+    color: var(--color-text-muted);
+    max-width: 620px;
+    line-height: 1.7;
+    margin-bottom: 2.5rem;
+  }
+
+  .industry-section__features {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 1.25rem;
+    margin-bottom: 2.5rem;
+  }
+  .feature {
+    padding: 1.5rem;
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius);
+    background: var(--color-bg);
+    transition: border-color 0.2s;
+  }
+  .industry-section--alt .feature { background: var(--color-bg-secondary); }
+  .feature:hover { border-color: var(--color-accent); }
+  .feature__title { font-size: 0.95rem; font-weight: 700; margin-bottom: 0.5rem; }
+  .feature__desc { font-size: 0.875rem; color: var(--color-text-muted); line-height: 1.6; }
+
+  .industry-section__stat {
+    display: flex;
+    align-items: baseline;
+    gap: 1rem;
+    flex-wrap: wrap;
+  }
+  .stat-value {
+    font-size: 2.5rem;
+    font-weight: 800;
+    color: var(--color-accent);
+    line-height: 1;
+  }
+  .stat-label {
+    font-size: 0.9rem;
+    color: var(--color-text-muted);
+    max-width: 400px;
+  }
+
+  .cta-section {
+    padding: 5rem 0;
+    text-align: center;
+    background: var(--color-bg-secondary);
+    border-top: 1px solid var(--color-border);
+  }
+  .cta-section__heading { font-size: 2.25rem; font-weight: 800; margin-bottom: 1rem; }
+  .cta-section__desc {
+    color: var(--color-text-muted);
+    font-size: 1.1rem;
+    margin-bottom: 2rem;
+    max-width: 520px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+</style>
