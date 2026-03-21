@@ -1,37 +1,53 @@
 ---
-// src/components/Footer.astro
 ---
-<footer class="footer">
-  <div class="container footer__inner">
-    <span class="footer__brand">Kayablue</span>
-    <p class="footer__copy">&copy; {new Date().getFullYear()} Kayablue. All rights reserved.</p>
-    <a href="/book-a-call" class="footer__cta">Book a Call</a>
+<footer class="bg-[#081221] py-16 px-6 lg:px-20 border-t border-slate-900">
+  <div class="max-w-7xl mx-auto grid md:grid-cols-4 gap-12">
+    <div class="col-span-2">
+      <div class="flex items-center gap-2 mb-6">
+        <div class="text-accent">
+          <span class="material-symbols-outlined text-3xl">terminal</span>
+        </div>
+        <h2 class="text-xl font-bold tracking-tight text-white">Kaya <span class="text-accent">Blue</span></h2>
+      </div>
+      <p class="text-text-muted max-w-sm mb-6 leading-relaxed">
+        Crafting high-performance digital experiences for the world's most demanding industries. Built with precision, focused on results.
+      </p>
+      <div class="flex gap-4">
+        <a class="h-10 w-10 rounded bg-card-dark flex items-center justify-center text-text-muted hover:text-accent transition-colors" href="#">
+          <span class="material-symbols-outlined text-xl">share</span>
+        </a>
+        <a class="h-10 w-10 rounded bg-card-dark flex items-center justify-center text-text-muted hover:text-accent transition-colors" href="#">
+          <span class="material-symbols-outlined text-xl">alternate_email</span>
+        </a>
+        <a class="h-10 w-10 rounded bg-card-dark flex items-center justify-center text-text-muted hover:text-accent transition-colors" href="#">
+          <span class="material-symbols-outlined text-xl">link</span>
+        </a>
+      </div>
+    </div>
+    <div>
+      <h5 class="font-bold text-white mb-6 uppercase text-sm tracking-widest">Company</h5>
+      <ul class="flex flex-col gap-4">
+        <li><a class="text-text-muted hover:text-accent transition-colors" href="/about">About Us</a></li>
+        <li><a class="text-text-muted hover:text-accent transition-colors" href="/about">Our Process</a></li>
+        <li><a class="text-text-muted hover:text-accent transition-colors" href="/our-work">Portfolio</a></li>
+        <li><a class="text-text-muted hover:text-accent transition-colors" href="/careers">Careers</a></li>
+      </ul>
+    </div>
+    <div>
+      <h5 class="font-bold text-white mb-6 uppercase text-sm tracking-widest">Solutions</h5>
+      <ul class="flex flex-col gap-4">
+        <li><a class="text-text-muted hover:text-accent transition-colors" href="/services">Web Development</a></li>
+        <li><a class="text-text-muted hover:text-accent transition-colors" href="/services">UI/UX Design</a></li>
+        <li><a class="text-text-muted hover:text-accent transition-colors" href="/services">Lead Gen Systems</a></li>
+        <li><a class="text-text-muted hover:text-accent transition-colors" href="/services">Agency Portals</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="max-w-7xl mx-auto mt-16 pt-8 border-t border-slate-800 flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-text-muted">
+    <p>&copy; 2024 Kaya Blue. All rights reserved.</p>
+    <div class="flex gap-8">
+      <a class="hover:text-accent transition-colors" href="#">Privacy Policy</a>
+      <a class="hover:text-accent transition-colors" href="#">Terms of Service</a>
+    </div>
   </div>
 </footer>
-
-<style>
-  .footer {
-    border-top: 1px solid var(--color-border);
-    padding: var(--spacing-lg) 0;
-    margin-top: var(--spacing-xl);
-  }
-  .footer__inner {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: var(--spacing-md);
-    flex-wrap: wrap;
-  }
-  .footer__brand {
-    font-weight: 700;
-  }
-  .footer__copy {
-    font-size: 0.85rem;
-    opacity: 0.6;
-  }
-  .footer__cta {
-    font-size: 0.9rem;
-    font-weight: 600;
-    color: var(--color-accent);
-  }
-</style>

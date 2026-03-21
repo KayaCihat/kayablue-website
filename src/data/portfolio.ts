@@ -63,13 +63,13 @@ export const portfolio: PortfolioItem[] = [
     tags: ['Dashboard', 'Freelance'],
   },
   {
-    title: 'Glodinas Finance — Home',
+    title: 'Kayablue Finance — Home',
     description: 'Financial SaaS homepage',
     image: '/images/portfolio/glodinas-finance-home.jpg',
     tags: ['Finance', 'Homepage'],
   },
   {
-    title: 'Glodinas Finance — Dashboard',
+    title: 'Kayablue Finance — Dashboard',
     description: 'Financial admin dashboard — dark and light modes',
     image: '/images/portfolio/glodinas-finance.jpg',
     tags: ['Finance', 'Dashboard'],

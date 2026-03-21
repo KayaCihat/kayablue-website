@@ -1,101 +1,131 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
 ---
-<BaseLayout title="Book a Call" description="Schedule a strategy session with Kayablue">
-
-  <!-- Hero -->
-  <section class="bac-hero">
-    <div class="container">
-      <p class="bac-hero__label">Schedule an appointment</p>
-      <h1 class="bac-hero__heading">Let's talk about your project</h1>
-      <p class="bac-hero__desc">We engineer high-performance digital systems for demanding organisations. Tell us about your goals and we'll map out the path forward.</p>
-    </div>
-  </section>
-
-  <!-- Main content: form + contact info -->
-  <section class="bac-main">
-    <div class="container bac-main__inner">
-
-      <!-- Contact Form -->
-      <div class="form-panel">
-        <h2 class="form-panel__title">Send us a message</h2>
-        <form id="contact-form" class="contact-form" novalidate>
-          <!-- Honeypot -->
-          <input type="text" name="website" tabindex="-1" autocomplete="off" style="display:none;" />
-
-          <div class="form-group">
-            <label for="name" class="form-label">Full Name <span class="req">*</span></label>
-            <input type="text" id="name" name="name" required class="form-input" placeholder="Your name" />
-          </div>
-
-          <div class="form-group">
-            <label for="email" class="form-label">Email Address <span class="req">*</span></label>
-            <input type="email" id="email" name="email" required class="form-input" placeholder="you@company.com" />
-          </div>
-
-          <div class="form-group">
-            <label for="phone" class="form-label">Phone <span class="opt">(optional)</span></label>
-            <input type="tel" id="phone" name="phone" class="form-input" placeholder="+1 (555) 000-0000" />
-          </div>
-
-          <div class="form-group">
-            <label for="preferredDate" class="form-label">Preferred Date <span class="opt">(optional)</span></label>
-            <input type="date" id="preferredDate" name="preferredDate" class="form-input" />
-          </div>
-
-          <div class="form-group">
-            <label for="message" class="form-label">Message <span class="req">*</span></label>
-            <textarea id="message" name="message" required class="form-input form-textarea" rows="5" placeholder="Tell us about your project..."></textarea>
-          </div>
-
-          <button type="submit" class="btn btn--primary btn--full">Send Message</button>
-          <p id="form-status" aria-live="polite" class="form-status"></p>
-        </form>
-      </div>
-
-      <!-- Contact Info + FAQ -->
-      <div class="info-panel">
-        <div class="contact-channels">
-          <h2 class="info-panel__title">Contact Channels</h2>
-          <div class="channel">
-            <span class="channel__label">Email</span>
-            <a href="mailto:hello@kayablue.com" class="channel__value">hello@kayablue.com</a>
-          </div>
-          <div class="channel">
-            <span class="channel__label">Phone</span>
-            <a href="tel:+15550001234" class="channel__value">+1 (555) 000-1234</a>
-          </div>
-          <div class="channel">
-            <span class="channel__label">Studio</span>
-            <span class="channel__value">128 Matrix Plaza, Suite 400<br />San Francisco, CA 94103</span>
-          </div>
-        </div>
-
-        <div class="faq">
-          <h2 class="info-panel__title">Common Questions</h2>
-
-          <div class="faq-item">
-            <h3 class="faq-item__q">How long does a project take?</h3>
-            <p class="faq-item__a">Most projects move through 6–12 week architecture phases depending on scope and complexity.</p>
-          </div>
-
-          <div class="faq-item">
-            <h3 class="faq-item__q">How is pricing structured?</h3>
-            <p class="faq-item__a">We offer value-based fixed pricing for defined projects and monthly retainers for ongoing partnerships.</p>
-          </div>
-
-          <div class="faq-item">
-            <h3 class="faq-item__q">What tech stack do you use?</h3>
-            <p class="faq-item__a">We specialise in Next.js, Astro, and scalable cloud infrastructure — chosen for your specific performance requirements.</p>
-          </div>
-        </div>
-      </div>
-
-    </div>
-  </section>
-
-</BaseLayout>
-
+<BaseLayout title="Book a Call" description="Schedule a strategy session with Kaya Blue">
+<main class="pt-20 pb-24 px-6 aura-glow">
+<div class="max-w-7xl mx-auto">
+<header class="text-center mb-20 max-w-4xl mx-auto">
+<span class="font-mono text-[12px] uppercase tracking-widest text-accent mb-4 block">Schedule an appointment</span>
+<h1 class="text-5xl md:text-7xl font-black text-white tracking-tighter leading-none mb-6">
+Let's talk about your project
+</h1>
+<p class="text-lg md:text-xl text-text-muted max-w-2xl mx-auto leading-relaxed">
+Engineering high-performance digital systems for organizations that demand technical prestige and uncompromising speed.
+</p>
+</header>
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
+<!-- Contact Form -->
+<section class="lg:col-span-8 bg-surface-container rounded-xl p-8 border border-outline-variant/20 shadow-2xl">
+<h3 class="text-xl font-bold text-white mb-6">Send Us a Message</h3>
+<form id="contact-form" novalidate class="space-y-6">
+<input type="text" name="website" tabindex="-1" autocomplete="off" class="hidden" />
+<div>
+<label for="name" class="block text-[12px] text-text-muted uppercase tracking-wide mb-2">Full Name <span class="text-accent">*</span></label>
+<input type="text" id="name" name="name" required class="w-full bg-surface-container-highest border border-outline-variant/30 text-white rounded-lg px-4 py-3 focus:outline-none focus:border-accent transition-colors" placeholder="Your name" />
+</div>
+<div>
+<label for="email" class="block text-[12px] text-text-muted uppercase tracking-wide mb-2">Email Address <span class="text-accent">*</span></label>
+<input type="email" id="email" name="email" required class="w-full bg-surface-container-highest border border-outline-variant/30 text-white rounded-lg px-4 py-3 focus:outline-none focus:border-accent transition-colors" placeholder="you@company.com" />
+</div>
+<div>
+<label for="phone" class="block text-[12px] text-text-muted uppercase tracking-wide mb-2">Phone <span class="text-text-muted">(optional)</span></label>
+<input type="tel" id="phone" name="phone" class="w-full bg-surface-container-highest border border-outline-variant/30 text-white rounded-lg px-4 py-3 focus:outline-none focus:border-accent transition-colors" placeholder="+1 (555) 000-0000" />
+</div>
+<div>
+<label for="preferredDate" class="block text-[12px] text-text-muted uppercase tracking-wide mb-2">Preferred Date <span class="text-text-muted">(optional)</span></label>
+<input type="date" id="preferredDate" name="preferredDate" class="w-full bg-surface-container-highest border border-outline-variant/30 text-white rounded-lg px-4 py-3 focus:outline-none focus:border-accent transition-colors" />
+</div>
+<div>
+<label for="message" class="block text-[12px] text-text-muted uppercase tracking-wide mb-2">Message <span class="text-accent">*</span></label>
+<textarea id="message" name="message" required rows="5" class="w-full bg-surface-container-highest border border-outline-variant/30 text-white rounded-lg px-4 py-3 focus:outline-none focus:border-accent transition-colors resize-vertical" placeholder="Tell us about your project..."></textarea>
+</div>
+<button type="submit" class="w-full py-4 bg-accent text-primary font-black rounded-lg shadow-[0_0_20px_rgba(100,255,218,0.3)] active:scale-[0.98] transition-all hover:opacity-90 text-lg">
+Send Message
+</button>
+<p id="form-status" aria-live="polite" class="text-sm min-h-[1.4em]"></p>
+</form>
+</section>
+<!-- Contact Details -->
+<aside class="lg:col-span-4 space-y-8">
+<div class="bg-surface-container-low p-8 rounded-xl border border-outline-variant/10">
+<h3 class="font-mono text-[10px] uppercase tracking-widest text-accent mb-6">Contact Channels</h3>
+<div class="space-y-6">
+<div class="flex items-start gap-4">
+<div class="bg-surface-container-highest p-2 rounded-lg">
+<span class="material-symbols-outlined text-accent">mail</span>
+</div>
+<div>
+<p class="text-[12px] text-text-muted uppercase tracking-wide">Email</p>
+<a class="text-lg font-bold text-white hover:text-accent transition-colors" href="mailto:hello@kayablue.com">hello@kayablue.com</a>
+</div>
+</div>
+<div class="flex items-start gap-4">
+<div class="bg-surface-container-highest p-2 rounded-lg">
+<span class="material-symbols-outlined text-accent">call</span>
+</div>
+<div>
+<p class="text-[12px] text-text-muted uppercase tracking-wide">Studio Line</p>
+<p class="text-lg font-bold text-white">+1 (555) 000-1234</p>
+</div>
+</div>
+<div class="flex items-start gap-4">
+<div class="bg-surface-container-highest p-2 rounded-lg">
+<span class="material-symbols-outlined text-accent">location_on</span>
+</div>
+<div>
+<p class="text-[12px] text-text-muted uppercase tracking-wide">Address</p>
+<p class="text-lg font-bold text-white">128 Matrix Plaza, Suite 400<br>San Francisco, CA 94103</p>
+</div>
+</div>
+</div>
+</div>
+<div class="relative h-48 rounded-xl overflow-hidden bg-surface-container-highest">
+<img class="w-full h-full object-cover opacity-40 grayscale contrast-125" alt="Stylized dark map of San Francisco area" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD6QeepSyh0ea8cVHZ_mlguJjQOp9Qf2Mddk3am_3qWUEPAVFboIZg8YxnlHrCvQGpIH7xAq5O0anbDT52IRWG_6gNMEN032t_hFO-1d0iVp-rY8E2slvggQYjRYucyMZFma9R7Yx5k5U3Poiujok_1ZSNJnjYyBP0JZpPUTYylglONGBg5PDHWvhGp6I3sBC2eyfAUQBxA13efJ5t5Vdil2ZlIASfeO9jFNuiTk0uwd9LnDW6sm4pXLK4gICSRuwT6-ns7yVyNXhw" />
+<div class="absolute inset-0 bg-gradient-to-t from-surface-container-low to-transparent"></div>
+<div class="absolute bottom-4 left-4">
+<span class="font-mono text-[10px] text-accent">HQ: LAT 37.77 / LONG -122.41</span>
+</div>
+</div>
+</aside>
+</div>
+<!-- Common Inquiries -->
+<section class="mt-32">
+<div class="flex items-end justify-between mb-12 border-b border-outline-variant/30 pb-6">
+<div>
+<h2 class="text-3xl font-black text-white tracking-tight">Common Inquiries</h2>
+<p class="text-text-muted mt-2">Handling objections before we even start.</p>
+</div>
+<span class="material-symbols-outlined text-accent text-4xl">info</span>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+<div class="bg-surface-container p-8 rounded-xl border border-outline-variant/10 hover:border-accent/50 transition-all group">
+<div class="mb-6 flex justify-between items-start">
+<span class="font-mono text-[12px] text-accent">01</span>
+<span class="material-symbols-outlined text-text-muted group-hover:text-accent transition-colors">schedule</span>
+</div>
+<h4 class="text-xl font-bold text-white mb-3">Project Timelines</h4>
+<p class="text-text-muted leading-relaxed">Typical architecture phases last 6-12 weeks depending on complexity. We prioritize milestones over hours.</p>
+</div>
+<div class="bg-surface-container p-8 rounded-xl border border-outline-variant/10 hover:border-accent/50 transition-all group">
+<div class="mb-6 flex justify-between items-start">
+<span class="font-mono text-[12px] text-accent">02</span>
+<span class="material-symbols-outlined text-text-muted group-hover:text-accent transition-colors">payments</span>
+</div>
+<h4 class="text-xl font-bold text-white mb-3">Investment Model</h4>
+<p class="text-text-muted leading-relaxed">We work on a value-based fixed pricing or monthly technical retainer. No hidden overheads or surprise invoices.</p>
+</div>
+<div class="bg-surface-container p-8 rounded-xl border border-outline-variant/10 hover:border-accent/50 transition-all group">
+<div class="mb-6 flex justify-between items-start">
+<span class="font-mono text-[12px] text-accent">03</span>
+<span class="material-symbols-outlined text-text-muted group-hover:text-accent transition-colors">terminal</span>
+</div>
+<h4 class="text-xl font-bold text-white mb-3">Tech Stack</h4>
+<p class="text-text-muted leading-relaxed">Agnostic but performance-obsessed. Specialized in Next.js, Astro, and scalable cloud infrastructures.</p>
+</div>
+</div>
+</section>
+</div>
+</main>
 <script>
   const form = document.getElementById('contact-form') as HTMLFormElement;
   const status = document.getElementById('form-status')!;
@@ -104,7 +134,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
     e.preventDefault();
     const data = Object.fromEntries(new FormData(form));
     status.textContent = 'Sending...';
-    status.className = 'form-status';
+    status.className = 'text-sm min-h-[1.4em]';
     try {
       const res = await fetch('https://api.kayablue.nl/api/contact', {
         method: 'POST',
@@ -114,120 +144,16 @@ import BaseLayout from '../layouts/BaseLayout.astro';
       const json = await res.json();
       if (json.success) {
         status.textContent = "Thanks! We'll be in touch shortly.";
-        status.className = 'form-status form-status--success';
+        status.className = 'text-sm min-h-[1.4em] text-green-400';
         form.reset();
       } else {
         status.textContent = json.error || 'Something went wrong. Please try again.';
-        status.className = 'form-status form-status--error';
+        status.className = 'text-sm min-h-[1.4em] text-red-400';
       }
     } catch {
       status.textContent = 'Network error. Please try again.';
-      status.className = 'form-status form-status--error';
+      status.className = 'text-sm min-h-[1.4em] text-red-400';
     }
   });
 </script>
-
-<style>
-  .btn {
-    display: inline-block;
-    padding: 0.75rem 1.75rem;
-    border-radius: var(--radius);
-    font-weight: 600;
-    font-size: 0.95rem;
-    transition: opacity 0.2s, transform 0.2s;
-    cursor: pointer;
-    border: none;
-  }
-  .btn:hover { opacity: 0.85; transform: translateY(-1px); }
-  .btn--primary { background: var(--color-accent); color: #fff; }
-  .btn--full { width: 100%; text-align: center; }
-
-  .bac-hero {
-    padding: 6rem 0 4rem;
-    border-bottom: 1px solid var(--color-border);
-  }
-  .bac-hero__label {
-    font-size: 0.8rem;
-    font-weight: 700;
-    letter-spacing: 0.1em;
-    text-transform: uppercase;
-    color: var(--color-accent);
-    margin-bottom: 0.75rem;
-  }
-  .bac-hero__heading {
-    font-size: clamp(2rem, 5vw, 3rem);
-    font-weight: 800;
-    line-height: 1.15;
-    margin-bottom: 1.25rem;
-  }
-  .bac-hero__desc {
-    font-size: 1.1rem;
-    color: var(--color-text-muted);
-    max-width: 580px;
-    line-height: 1.7;
-  }
-
-  .bac-main { padding: 5rem 0; }
-  .bac-main__inner {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 4rem;
-    align-items: start;
-  }
-
-  /* Form */
-  .form-panel__title, .info-panel__title {
-    font-size: 1.25rem;
-    font-weight: 700;
-    margin-bottom: 1.75rem;
-  }
-  .contact-form { display: flex; flex-direction: column; gap: 1.25rem; }
-  .form-group { display: flex; flex-direction: column; gap: 0.4rem; }
-  .form-label { font-size: 0.875rem; font-weight: 600; }
-  .req { color: var(--color-accent); }
-  .opt { color: var(--color-text-muted); font-weight: 400; }
-  .form-input {
-    background: var(--color-bg-secondary);
-    border: 1px solid var(--color-border);
-    border-radius: var(--radius);
-    color: var(--color-text);
-    font-family: var(--font-family);
-    font-size: 0.95rem;
-    padding: 0.7rem 1rem;
-    width: 100%;
-    transition: border-color 0.2s;
-    outline: none;
-  }
-  .form-input:focus { border-color: var(--color-accent); }
-  .form-textarea { resize: vertical; min-height: 120px; }
-  .form-status {
-    font-size: 0.9rem;
-    min-height: 1.4em;
-    margin-top: 0.25rem;
-  }
-  .form-status--success { color: #34d399; }
-  .form-status--error { color: #f87171; }
-
-  /* Info panel */
-  .contact-channels { margin-bottom: 3rem; }
-  .channel {
-    display: flex;
-    flex-direction: column;
-    gap: 0.2rem;
-    padding: 1rem 0;
-    border-bottom: 1px solid var(--color-border);
-  }
-  .channel:last-child { border-bottom: none; }
-  .channel__label { font-size: 0.75rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; color: var(--color-text-muted); }
-  .channel__value { font-size: 1rem; color: var(--color-text); line-height: 1.5; }
-  a.channel__value { color: var(--color-accent); }
-  a.channel__value:hover { text-decoration: underline; }
-
-  .faq { display: flex; flex-direction: column; gap: 1.5rem; }
-  .faq-item__q { font-size: 0.95rem; font-weight: 700; margin-bottom: 0.4rem; }
-  .faq-item__a { font-size: 0.875rem; color: var(--color-text-muted); line-height: 1.6; }
-
-  @media (max-width: 800px) {
-    .bac-main__inner { grid-template-columns: 1fr; gap: 3rem; }
-  }
-</style>
+</BaseLayout>

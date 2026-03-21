@@ -2,265 +2,180 @@
 import BaseLayout from '../layouts/BaseLayout.astro';
 ---
 <BaseLayout title="Home" description="Kayablue — Premium web solutions for real estate, staffing, and finance professionals">
-
-  <!-- Hero -->
-  <section class="hero">
-    <div class="container hero__inner">
-      <div class="hero__content">
-        <h1 class="hero__heading">Premium Web Solutions</h1>
-        <p class="hero__sub">Websites that work as hard as your business</p>
-        <p class="hero__desc">High-converting digital experiences for real estate, staffing, and finance professionals.</p>
-        <div class="hero__actions">
-          <a href="/book-a-call" class="btn btn--primary">Book a Free Call</a>
-          <a href="/our-work" class="btn btn--ghost">View Our Work</a>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Industries We Serve -->
-  <section class="industries">
-    <div class="container">
-      <h2 class="section-title">Industries We Serve</h2>
-      <div class="industries__grid">
-        <div class="industry-card">
-          <div class="industry-card__icon">🏢</div>
-          <h3 class="industry-card__title">Real Estate</h3>
-          <p class="industry-card__desc">High-impact property listings and automated lead generation funnels that convert visitors into clients.</p>
-        </div>
-        <div class="industry-card">
-          <div class="industry-card__icon">👥</div>
-          <h3 class="industry-card__title">Staffing Agencies</h3>
-          <p class="industry-card__desc">Custom recruitment portals with applicant tracking that streamline your hiring pipeline.</p>
-        </div>
-        <div class="industry-card">
-          <div class="industry-card__icon">💼</div>
-          <h3 class="industry-card__title">Finance</h3>
-          <p class="industry-card__desc">Secure fintech solutions emphasizing trust, compliance, and seamless client experiences.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Recent Work -->
-  <section class="recent-work">
-    <div class="container">
-      <div class="section-header">
-        <h2 class="section-title">Our Recent Work</h2>
-        <a href="/our-work" class="btn btn--ghost">View All Projects</a>
-      </div>
-      <div class="work-grid">
-        <div class="work-card">
-          <div class="work-card__badge">Real Estate</div>
-          <h3 class="work-card__title">Skyline Properties</h3>
-          <p class="work-card__desc">Direct Booking &amp; CRM — Luxury listing platform with immersive lead generation funnels.</p>
-        </div>
-        <div class="work-card">
-          <div class="work-card__badge">Staffing</div>
-          <h3 class="work-card__title">TalentFlow Portal</h3>
-          <p class="work-card__desc">Applicant Tracking System — Recruitment dashboard managing 10k+ active candidates.</p>
-        </div>
-        <div class="work-card">
-          <div class="work-card__badge">Finance</div>
-          <h3 class="work-card__title">Vantage Wealth</h3>
-          <p class="work-card__desc">Asset Tracking Platform — Premium asset management with real-time market data.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Testimonials -->
-  <section class="testimonials">
-    <div class="container">
-      <h2 class="section-title">Trusted by industry leaders</h2>
-      <div class="testimonials__grid">
-        <blockquote class="testimonial">
-          <p class="testimonial__text">"Working with Kayablue transformed our online presence. We saw a 40% increase in qualified inquiries within the first month."</p>
-          <footer class="testimonial__author">— Marcus Chen, Skyline Properties CEO</footer>
-        </blockquote>
-        <blockquote class="testimonial">
-          <p class="testimonial__text">"The recruitment portal they built saved our team dozens of hours each week. The interface is intuitive and our clients love it."</p>
-          <footer class="testimonial__author">— Sarah Jenkins, TalentFlow CTO</footer>
-        </blockquote>
-      </div>
-    </div>
-  </section>
-
-  <!-- CTA -->
-  <section class="cta-section">
-    <div class="container cta-section__inner">
-      <h2 class="cta-section__heading">Ready to scale your digital presence?</h2>
-      <p class="cta-section__desc">Let us build a custom digital experience that drives real results for your business.</p>
-      <a href="/book-a-call" class="btn btn--primary btn--lg">Schedule Your Strategy Session</a>
-    </div>
-  </section>
-
+<div class="relative flex h-auto min-h-screen w-full flex-col overflow-x-hidden">
+<!-- Hero Section -->
+<section class="relative px-6 lg:px-20 py-20 lg:py-32 max-w-7xl mx-auto">
+<div class="grid lg:grid-cols-2 gap-12 items-center">
+<div class="flex flex-col gap-8">
+<div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-accent/10 border border-accent/20 w-fit">
+<span class="flex h-2 w-2 rounded-full bg-accent"></span>
+<span class="text-xs font-bold uppercase tracking-widest text-accent">Premium Web Solutions</span>
+</div>
+<h1 class="text-5xl lg:text-7xl font-black leading-tight tracking-tight text-white">
+Websites that work as hard as <span class="text-accent">your business</span>
+</h1>
+<p class="text-lg text-text-muted leading-relaxed max-w-xl">
+We build high-converting digital experiences tailored for real estate, staffing, and finance professionals who demand excellence.
+</p>
+<div class="flex flex-wrap gap-4">
+<a href="/book-a-call" class="bg-accent text-primary px-8 py-4 rounded-lg font-bold text-base hover:scale-105 transition-transform accent-glow">
+Book a Free Call
+</a>
+<a href="/our-work" class="border border-slate-700 px-8 py-4 rounded-lg font-bold text-base hover:bg-card-dark transition-colors">
+View Our Work
+</a>
+</div>
+</div>
+<div class="relative group">
+<div class="absolute -inset-1 bg-gradient-to-r from-accent to-blue-500 rounded-xl blur opacity-25 group-hover:opacity-40 transition duration-1000"></div>
+<div class="relative aspect-video rounded-xl bg-card-dark border border-slate-800 overflow-hidden shadow-2xl">
+<img class="w-full h-full object-cover opacity-90 group-hover:scale-105 transition-transform duration-700" alt="Modern laptop displaying a sleek dashboard interface" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAGolhYl_zdrOvS7TtUVLDM0I-HCOlGSD6qB1iN0ezkVznWtgHnKs4_noRPNypWEshOUpc0V0JkQ23KJNVFZabdT251YUto0EBiMbH64086P5gfU0UDyRDhGDyzUpgOknhdTMOI-k6tgFhmGSRSa3Kis_j6uSAX68wzdRz5RBN3L1pRg9EeJ8ZQcVyWZV54KVFPMuuZQx75xkfiAcEOOHltRfvdx67WuU_S4WzHIqu1Dxzseuy3c4L7OLcqBUeKIy3zl51hWZs2L-w" />
+</div>
+</div>
+</div>
+</section>
+<!-- Industries Section -->
+<section class="bg-[#0d1b2a] py-24 px-6 lg:px-20">
+<div class="max-w-7xl mx-auto">
+<div class="flex flex-col items-center text-center mb-16">
+<h2 class="text-accent font-mono text-sm tracking-widest mb-4">EXPERTISE</h2>
+<h3 class="text-3xl lg:text-4xl font-bold text-white">Industries We Serve</h3>
+<div class="h-1 w-20 bg-accent mt-6 rounded-full"></div>
+</div>
+<div class="grid md:grid-cols-3 gap-8">
+<div class="group p-8 rounded-xl bg-card-dark border border-slate-800 hover:border-accent/50 transition-all duration-300 shadow-sm">
+<div class="w-14 h-14 rounded-lg bg-accent/10 flex items-center justify-center text-accent mb-6 group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-3xl">real_estate_agent</span>
+</div>
+<h4 class="text-xl font-bold mb-3 text-white">Real Estate</h4>
+<p class="text-text-muted leading-relaxed">
+High-impact property listings and automated lead generation funnels designed to close deals faster.
+</p>
+</div>
+<div class="group p-8 rounded-xl bg-card-dark border border-slate-800 hover:border-accent/50 transition-all duration-300 shadow-sm">
+<div class="w-14 h-14 rounded-lg bg-accent/10 flex items-center justify-center text-accent mb-6 group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-3xl">group_work</span>
+</div>
+<h4 class="text-xl font-bold mb-3 text-white">Staffing Agencies</h4>
+<p class="text-text-muted leading-relaxed">
+Custom portals for recruitment and Uitzendbureaus, streamlining applicant tracking and client management.
+</p>
+</div>
+<div class="group p-8 rounded-xl bg-card-dark border border-slate-800 hover:border-accent/50 transition-all duration-300 shadow-sm">
+<div class="w-14 h-14 rounded-lg bg-accent/10 flex items-center justify-center text-accent mb-6 group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-3xl">account_balance</span>
+</div>
+<h4 class="text-xl font-bold mb-3 text-white">Finance</h4>
+<p class="text-text-muted leading-relaxed">
+Secure, professional, and compliant fintech solutions that build trust and drive complex user interactions.
+</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Portfolio Section -->
+<section class="py-24 px-6 lg:px-20 max-w-7xl mx-auto">
+<div class="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-6">
+<div>
+<h2 class="text-accent font-mono text-sm tracking-widest mb-4">PORTFOLIO</h2>
+<h3 class="text-3xl lg:text-4xl font-bold text-white">Our Recent Work</h3>
+</div>
+<a class="text-accent font-medium flex items-center gap-2 hover:gap-4 transition-all group" href="/our-work">
+View All Projects <span class="material-symbols-outlined group-hover:translate-x-1 transition-transform">arrow_forward</span>
+</a>
+</div>
+<div class="grid md:grid-cols-3 gap-8">
+<div class="flex flex-col gap-4 group">
+<div class="overflow-hidden rounded-xl aspect-[4/3] bg-card-dark relative shadow-xl">
+<img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500 opacity-80 group-hover:opacity-100" alt="Luxury real estate agency landing page design" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC629CWE8BoaBY1jVYT7NoANEc_i0P9q4_c0oWoRj9wxlLasno1LKZcAfe4KDHSVbwZY7h2TJHf8hw6gPXFxjs90zwWoSoMKVcm1Os9iq8KwrEpIruTcP_7IjMOMEohbJBjviiLIIySeDu-_cmjI4HBcH1x_vX3u39q04lz7gRzOdmYFXM-N6z-wVQ-wB49LMme2RTEkjjYGfyDHrCpz0nnXUDQ32_s-35EtRhTjFNeoxRWHGr7-ROWFFmYl2JzLc0zKFkQWZdXdh4" />
+<div class="absolute top-4 left-4 bg-primary/80 backdrop-blur-md px-3 py-1 rounded border border-accent/30">
+<span class="text-[10px] font-bold tracking-widest text-accent uppercase">Real Estate</span>
+</div>
+</div>
+<div>
+<h4 class="text-lg font-bold text-white group-hover:text-accent transition-colors">Skyline Properties</h4>
+<p class="text-sm text-text-muted">Direct Booking &amp; CRM Integration</p>
+</div>
+</div>
+<div class="flex flex-col gap-4 group">
+<div class="overflow-hidden rounded-xl aspect-[4/3] bg-card-dark relative shadow-xl">
+<img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500 opacity-80 group-hover:opacity-100" alt="Professional staffing portal dashboard view" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDSfoaB0IBygO-rYQJRBBDs01opJ0q7fSX3eHJris6Sriic-FbolTVnRspS-IRfD-Q24o2ssDECl0m3xzqpO2JQdpHzGd6JkAmL-pEIUEMy7Df_2LQjS9KjsBp3bdtNwGf-yygjKJFU_VGT6l2Z-9LwqQiQavQslAjuLot5UpCPC0tZS-Kz0LzzkPddcK2E5I0gZbybW9u7XbOztY_L37EL7S1jyzefPkFuBZtf8BXIU16EvQq_bc75vkW1qfd7XqhOwKng8Hca5W8" />
+<div class="absolute top-4 left-4 bg-primary/80 backdrop-blur-md px-3 py-1 rounded border border-accent/30">
+<span class="text-[10px] font-bold tracking-widest text-accent uppercase">Staffing</span>
+</div>
+</div>
+<div>
+<h4 class="text-lg font-bold text-white group-hover:text-accent transition-colors">TalentFlow Portal</h4>
+<p class="text-sm text-text-muted">Bespoke Applicant Tracking System</p>
+</div>
+</div>
+<div class="flex flex-col gap-4 group">
+<div class="overflow-hidden rounded-xl aspect-[4/3] bg-card-dark relative shadow-xl">
+<img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500 opacity-80 group-hover:opacity-100" alt="Modern financial advisor wealth management interface" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCmkP0AAkgYpC1P2Kw9iaqEJ-ZotIqx1LW3EkQCEqOpBEdNz6BvUn-jp28rTSi-nKOFHo6nkyoVWTHlTi3bkxjavnBl2F1k15B810LqXmJM76o-c0Jnwj9hMFB8KsRe72kFarUSA6Jo-QRKtX2ZzT0dBGV_and8GRB5FoHvHyJFlhdelIBV0Fa5AuHE1u76GyAGJuKc3wsUm6hKWTH17SVrNMlTzQiMbPSt0wNn4GoOjh0KYLHNfMFBVD8oZ-7ofklaZV1FkSE_4iE" />
+<div class="absolute top-4 left-4 bg-primary/80 backdrop-blur-md px-3 py-1 rounded border border-accent/30">
+<span class="text-[10px] font-bold tracking-widest text-accent uppercase">Finance</span>
+</div>
+</div>
+<div>
+<h4 class="text-lg font-bold text-white group-hover:text-accent transition-colors">Vantage Wealth</h4>
+<p class="text-sm text-text-muted">Secure Asset Tracking Platform</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Social Proof Section -->
+<section class="bg-card-dark/30 py-24 px-6 lg:px-20 border-y border-slate-800">
+<div class="max-w-7xl mx-auto">
+<div class="grid md:grid-cols-2 gap-16 items-center">
+<div>
+<h2 class="text-accent font-mono text-sm tracking-widest mb-4">TESTIMONIALS</h2>
+<h3 class="text-3xl lg:text-4xl font-bold text-white mb-8">Trusted by industry leaders</h3>
+<div class="flex gap-4">
+<div class="p-2 bg-accent/20 rounded text-accent"><span class="material-symbols-outlined">star</span></div>
+<div class="p-2 bg-accent/20 rounded text-accent"><span class="material-symbols-outlined">star</span></div>
+<div class="p-2 bg-accent/20 rounded text-accent"><span class="material-symbols-outlined">star</span></div>
+<div class="p-2 bg-accent/20 rounded text-accent"><span class="material-symbols-outlined">star</span></div>
+<div class="p-2 bg-accent/20 rounded text-accent"><span class="material-symbols-outlined">star</span></div>
+</div>
+</div>
+<div class="flex flex-col gap-8">
+<div class="p-8 rounded-xl bg-card-dark border-l-4 border-accent shadow-sm italic">
+<p class="text-lg text-slate-200 mb-6">"Kayablue transformed our outdated real estate site into a lead-generating machine. We saw a 40% increase in inquiries within the first month."</p>
+<div class="flex items-center gap-4 not-italic">
+<div class="h-10 w-10 rounded-full bg-slate-700"></div>
+<div>
+<p class="font-bold text-white">Sarah Janssen</p>
+<p class="text-sm text-text-muted uppercase tracking-tighter">CEO, Janssen Realty</p>
+</div>
+</div>
+</div>
+<div class="p-8 rounded-xl bg-card-dark border-l-4 border-accent shadow-sm italic">
+<p class="text-lg text-slate-200 mb-6">"The recruitment portal built for our agency has saved us countless hours. Professional, fast, and exactly what we needed."</p>
+<div class="flex items-center gap-4 not-italic">
+<div class="h-10 w-10 rounded-full bg-slate-700"></div>
+<div>
+<p class="font-bold text-white">Mark de Vries</p>
+<p class="text-sm text-text-muted uppercase tracking-tighter">Founder, NextStep Staffing</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Call to Action -->
+<section class="py-24 px-6 lg:px-20 max-w-7xl mx-auto text-center">
+<div class="p-12 lg:p-20 rounded-2xl bg-gradient-to-br from-card-dark to-primary border border-slate-800 relative overflow-hidden">
+<div class="absolute top-0 right-0 -mr-20 -mt-20 w-64 h-64 bg-accent/10 rounded-full blur-3xl"></div>
+<div class="absolute bottom-0 left-0 -ml-20 -mb-20 w-64 h-64 bg-accent/10 rounded-full blur-3xl"></div>
+<div class="relative z-10 max-w-2xl mx-auto">
+<h2 class="text-4xl lg:text-5xl font-black mb-6 text-white">Ready to scale your digital presence?</h2>
+<p class="text-xl text-text-muted mb-10 leading-relaxed">Let's discuss how a custom-built digital experience can drive real results for your business.</p>
+<a href="/book-a-call" class="inline-block bg-accent text-primary px-10 py-5 rounded-lg font-bold text-lg hover:scale-105 transition-transform accent-glow">
+Schedule Your Strategy Session
+</a>
+</div>
+</div>
+</section>
+</div>
 </BaseLayout>
-
-<style>
-  /* Hero */
-  .hero {
-    padding: 6rem 0 5rem;
-    background: linear-gradient(135deg, var(--color-bg) 0%, var(--color-bg-secondary) 100%);
-    border-bottom: 1px solid var(--color-border);
-  }
-  .hero__inner {
-    max-width: 720px;
-  }
-  .hero__heading {
-    font-size: clamp(2.5rem, 6vw, 4rem);
-    font-weight: 800;
-    line-height: 1.1;
-    margin-bottom: 1rem;
-  }
-  .hero__sub {
-    font-size: 1.25rem;
-    color: var(--color-accent);
-    font-weight: 600;
-    margin-bottom: 1rem;
-  }
-  .hero__desc {
-    font-size: 1.1rem;
-    color: var(--color-text-muted);
-    margin-bottom: 2.5rem;
-    max-width: 560px;
-  }
-  .hero__actions {
-    display: flex;
-    gap: 1rem;
-    flex-wrap: wrap;
-  }
-
-  /* Buttons */
-  .btn {
-    display: inline-block;
-    padding: 0.75rem 1.75rem;
-    border-radius: var(--radius);
-    font-weight: 600;
-    font-size: 0.95rem;
-    transition: opacity 0.2s, transform 0.2s;
-    cursor: pointer;
-    border: 2px solid transparent;
-  }
-  .btn:hover { opacity: 0.85; transform: translateY(-1px); }
-  .btn--primary {
-    background: var(--color-accent);
-    color: #fff;
-  }
-  .btn--ghost {
-    border-color: var(--color-border);
-    color: var(--color-text);
-  }
-  .btn--ghost:hover { border-color: var(--color-accent); }
-  .btn--lg { padding: 1rem 2.25rem; font-size: 1.05rem; }
-
-  /* Sections */
-  .industries, .recent-work, .testimonials {
-    padding: 5rem 0;
-  }
-  .section-title {
-    font-size: 2rem;
-    font-weight: 700;
-    margin-bottom: 2.5rem;
-  }
-  .section-header {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    gap: 1rem;
-    margin-bottom: 2.5rem;
-  }
-  .section-header .section-title { margin-bottom: 0; }
-
-  /* Industry cards */
-  .industries__grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-    gap: 1.5rem;
-  }
-  .industry-card {
-    padding: 2rem;
-    background: var(--color-bg-secondary);
-    border: 1px solid var(--color-border);
-    border-radius: var(--radius);
-    transition: border-color 0.2s;
-  }
-  .industry-card:hover { border-color: var(--color-accent); }
-  .industry-card__icon { font-size: 2rem; margin-bottom: 1rem; }
-  .industry-card__title { font-size: 1.1rem; font-weight: 700; margin-bottom: 0.75rem; }
-  .industry-card__desc { color: var(--color-text-muted); line-height: 1.6; }
-
-  /* Work grid */
-  .work-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-    gap: 1.5rem;
-  }
-  .work-card {
-    padding: 2rem;
-    background: var(--color-bg-secondary);
-    border: 1px solid var(--color-border);
-    border-radius: var(--radius);
-    transition: border-color 0.2s;
-  }
-  .work-card:hover { border-color: var(--color-accent); }
-  .work-card__badge {
-    display: inline-block;
-    font-size: 0.75rem;
-    font-weight: 600;
-    color: var(--color-accent);
-    border: 1px solid var(--color-accent);
-    border-radius: 4px;
-    padding: 0.2rem 0.6rem;
-    margin-bottom: 1rem;
-    text-transform: uppercase;
-    letter-spacing: 0.05em;
-  }
-  .work-card__title { font-size: 1.1rem; font-weight: 700; margin-bottom: 0.75rem; }
-  .work-card__desc { color: var(--color-text-muted); line-height: 1.6; font-size: 0.9rem; }
-
-  /* Testimonials */
-  .testimonials { background: var(--color-bg-secondary); }
-  .testimonials__grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-    gap: 1.5rem;
-  }
-  .testimonial {
-    padding: 2rem;
-    border: 1px solid var(--color-border);
-    border-radius: var(--radius);
-    background: var(--color-bg);
-  }
-  .testimonial__text {
-    color: var(--color-text-muted);
-    line-height: 1.7;
-    font-style: italic;
-    margin-bottom: 1.25rem;
-  }
-  .testimonial__author {
-    font-weight: 600;
-    font-size: 0.9rem;
-    color: var(--color-accent);
-  }
-
-  /* CTA Section */
-  .cta-section {
-    padding: 5rem 0;
-    text-align: center;
-  }
-  .cta-section__heading {
-    font-size: 2.25rem;
-    font-weight: 800;
-    margin-bottom: 1rem;
-  }
-  .cta-section__desc {
-    color: var(--color-text-muted);
-    font-size: 1.1rem;
-    margin-bottom: 2rem;
-    max-width: 500px;
-    margin-left: auto;
-    margin-right: auto;
-  }
-</style>
