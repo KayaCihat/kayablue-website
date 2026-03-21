@@ -8,7 +8,7 @@
 
 ## Overview
 
-A 7-page marketing and portfolio website for Kayablue, a web design agency. Built with Astro, deployed to Cloudflare Pages, with a Cloudflare Pages Function handling contact form submissions. Design is derived from the Stitch project "Web Agency Portfolio Site" (projects/4753305574908518777).
+A 7-page marketing and portfolio website for Kayablue, a web design agency. Built with Astro (`output: "hybrid"`), deployed to Cloudflare Pages, with an Astro API route handling contact form submissions. Design is derived from the Stitch project "Web Agency Portfolio Site" (projects/4753305574908518777).
 
 ---
 
@@ -52,13 +52,17 @@ All design tokens (colors, typography, spacing, radius) are defined in `src/styl
 
 ### 6. Book a Call
 - Stitch screen: `edfbd223729248bd9042e2b5bb8ee4f6` — "Book a Call - Final Brand Sync"
-- Contact form (Name, Email, Phone optional, Message, Preferred date)
-- Form POSTs to `/api/contact` (Cloudflare Pages Function)
-- Inline success/error feedback (no page reload)
+- Contact form: Name, Email, Phone (optional), Message, Preferred date (`<input type="date">`, value sent as ISO date string)
+- Honeypot field (`<input name="website" style="display:none">`) for basic spam protection — submissions with this field filled are silently rejected
+- Form POSTs JSON to `/api/contact` (Astro API route, `Content-Type: application/json`)
+- Inline success/error feedback via `fetch()` — no page reload
 
 ### 7. Careers
 - Stitch screen: `37208444c4424354998f6b4f0ae8954b` — "Careers - Branded Navigation & Footer Sync"
 - Open positions or general application CTA
+
+### 404
+- `src/pages/404.astro` — custom branded not-found page matching site design
 
 ---
 
@@ -66,14 +70,20 @@ All design tokens (colors, typography, spacing, radius) are defined in `src/styl
 
 File: `src/data/portfolio.ts`
 
-Each entry includes:
-- `title: string` — project name
-- `description: string` — one-line summary
-- `image: string` — screenshot URL (from Stitch)
-- `tags: string[]` — e.g. `["Dashboard", "Redesign"]`
-- `url?: string` — optional external link
+Each entry:
+```ts
+interface PortfolioItem {
+  title: string;
+  description: string;   // one-line summary
+  image: string;         // path to local image, e.g. /images/portfolio/boekhoud-buddies.jpg
+  tags: string[];        // e.g. ["Dashboard", "Redesign"]
+  url?: string;          // optional external link
+}
+```
 
-**Client projects to include (from Stitch):**
+Portfolio images are **downloaded from Stitch and committed to `public/images/portfolio/`** — Stitch URLs are not guaranteed stable and should not be used directly in production.
+
+**Client projects to include:**
 - Boekhoud Buddies (Redesign, Homepage, Balans, Scan en Herken)
 - QuickResume Landing Page
 - Xcelerate Landing Page
@@ -102,26 +112,46 @@ kayablue/
 │   │   ├── about.astro            # About
 │   │   ├── industries.astro       # Industries We Serve
 │   │   ├── book-a-call.astro      # Book a Call (form)
-│   │   └── careers.astro          # Careers
+│   │   ├── careers.astro          # Careers
+│   │   ├── 404.astro              # Custom 404
+│   │   └── api/
+│   │       └── contact.ts         # API route — form handler (server endpoint)
 │   ├── data/
 │   │   └── portfolio.ts           # static list of client projects
 │   └── styles/
 │       └── global.css             # design tokens, resets, base styles
-├── functions/
-│   └── api/
-│       └── contact.ts             # Cloudflare Pages Function — form handler
 ├── public/
+│   ├── images/
+│   │   └── portfolio/             # downloaded portfolio screenshots
 │   └── favicon.svg
-├── astro.config.mjs               # Astro config with Cloudflare adapter
+├── astro.config.mjs               # output: "hybrid", Cloudflare adapter
 └── package.json
 ```
 
 ---
 
+## Astro Configuration
+
+```js
+// astro.config.mjs
+import { defineConfig } from 'astro/config';
+import cloudflare from '@astrojs/cloudflare';
+
+export default defineConfig({
+  output: 'hybrid',        // static pages + server API route
+  adapter: cloudflare(),
+});
+```
+
+`output: "hybrid"` — all pages render as static HTML at build time except the API route, which runs as a Cloudflare Pages Function.
+
+---
+
 ## Backend — Contact Form
 
-**Endpoint:** `POST /api/contact`
-**File:** `functions/api/contact.ts`
+**File:** `src/pages/api/contact.ts`
+**Route:** `POST /api/contact`
+**Content-Type:** `application/json`
 
 **Request body:**
 ```json
@@ -130,24 +160,25 @@ kayablue/
   "email": "string",
   "phone": "string (optional)",
   "message": "string",
-  "preferredDate": "string (optional)"
+  "preferredDate": "string — ISO date, e.g. 2026-04-15 (optional)",
+  "website": "string — honeypot, must be empty"
 }
 ```
 
-**Validation:**
-- `name` — required, non-empty
-- `email` — required, valid email format
-- `message` — required, non-empty
+**Logic:**
+1. Reject if `website` (honeypot) is non-empty → return `400`
+2. Validate: `name`, `email`, `message` required; email must match basic regex
+3. Send email via **Resend** (`npm i resend`) to `TO_EMAIL` env variable
+4. Return `200 { success: true }` or `400 { success: false, error: "..." }`
 
-**On success:**
-- Sends email to `TO_EMAIL` env variable via Mailchannels (free, built into Cloudflare Workers)
-- Returns `200 { success: true }`
-
-**On validation failure:**
-- Returns `400 { success: false, error: "..." }`
+**Email delivery: Resend**
+- MailChannels free tier was discontinued in 2024 and is no longer available on Cloudflare Workers
+- Resend has a free tier (3,000 emails/month), simple API, works natively in Cloudflare Workers
+- Requires a verified sending domain (e.g. `noreply@kayablue.nl`)
 
 **Environment variables (set in Cloudflare Pages dashboard):**
 - `TO_EMAIL` — destination email for form submissions
+- `RESEND_API_KEY` — Resend API key
 
 ---
 
@@ -158,12 +189,17 @@ kayablue/
 2. Connect repo in Cloudflare Pages dashboard
 3. Build command: `npm run build`
 4. Output directory: `dist/`
-5. Set `TO_EMAIL` environment variable
-6. Connect `kayablue.nl` custom domain (already on Cloudflare DNS — one click)
+5. Enable **`nodejs_compat`** compatibility flag in Cloudflare Pages settings (required for Resend and Node built-ins at runtime)
+6. Set environment variables: `TO_EMAIL`, `RESEND_API_KEY`
+7. Connect `kayablue.nl` custom domain (already on Cloudflare DNS — one click)
 
 ### Ongoing deployments
 - Every `git push` to `main` triggers an automatic build and deploy
 - No manual steps required after initial setup
+
+### Local development
+- Run `npx wrangler pages dev` to test Pages Functions locally
+- A `wrangler.toml` is not required for Pages projects but can be added for local dev bindings if needed
 
 ---
 
@@ -171,11 +207,11 @@ kayablue/
 
 | Layer | Technology |
 |---|---|
-| Framework | Astro |
+| Framework | Astro (`output: "hybrid"`) |
 | Styling | CSS (global.css with design tokens) |
 | Hosting | Cloudflare Pages |
-| Form handler | Cloudflare Pages Function (TypeScript) |
-| Email delivery | Mailchannels (free, via Cloudflare Workers) |
+| Form handler | Astro API route → Cloudflare Pages Function |
+| Email delivery | Resend (free tier, 3k emails/month) |
 | Domain | kayablue.nl (Cloudflare DNS) |
 | Source design | Stitch — "Web Agency Portfolio Site" |
 
@@ -186,5 +222,6 @@ kayablue/
 - CMS or admin panel
 - Authentication
 - Blog
+- Rate limiting / CAPTCHA (honeypot only for now)
 - Analytics (can be added later via Cloudflare Web Analytics — free)
 - Multilingual support
