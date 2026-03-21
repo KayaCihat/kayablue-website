@@ -1,129 +1,140 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
 ---
-<BaseLayout title="Careers" description="Join Kaya Blue — architects of the digital frontier">
+<BaseLayout title="Careers | Kaya Blue" description="Join the Kaya Blue team.">
 <main>
-<section class="relative pt-48 pb-32 px-8 overflow-hidden bg-background-dark">
+<!-- Hero Section -->
+<section class="relative pt-48 pb-32 px-8 overflow-hidden bg-surface-container-lowest">
+<div class="absolute top-0 right-0 w-1/2 h-full bg-surface-container-low opacity-50 -z-10 transform skew-x-12 translate-x-32"></div>
 <div class="max-w-7xl mx-auto">
 <div class="grid grid-cols-12 gap-8">
 <div class="col-span-12 md:col-span-10 lg:col-span-8 text-left">
-<span class="text-text-muted font-bold uppercase tracking-[0.2em] text-[10px] mb-6 block">Career Opportunities</span>
-<h1 class="text-6xl md:text-8xl font-black text-white tracking-tighter leading-[0.9] mb-12">
-Join the <span class="text-accent">Architects</span> of the Digital Frontier
-</h1>
-<p class="text-xl text-text-muted max-w-xl leading-relaxed font-medium">
-We are building the structural backbone of tomorrow's web. High-performance logic meets architectural precision.
-</p>
+<span class="text-secondary font-bold uppercase tracking-[0.2em] text-[10px] mb-6 block">Career Opportunities</span>
+<h1 class="text-6xl md:text-8xl font-black text-on-surface tracking-tighter leading-[0.9] mb-12">
+                            Join the <span class="text-primary">Architects</span> of the Digital Frontier
+                        </h1>
+<p class="text-xl text-on-surface-variant max-w-xl leading-relaxed font-medium">
+                            We are building the structural backbone of tomorrow's web. High-performance logic meets architectural precision.
+                        </p>
 </div>
 </div>
 </div>
 </section>
-<section class="py-24 px-8 bg-background-dark border-t border-slate-800">
+<!-- Open Positions Section (Bento Grid) -->
+<section class="py-24 px-8 bg-surface">
 <div class="max-w-7xl mx-auto">
 <div class="flex flex-col md:flex-row justify-between items-start md:items-end mb-16 gap-4">
 <div class="text-left">
-<h2 class="text-4xl font-bold tracking-tight text-white">Open Positions</h2>
-<p class="text-text-muted tracking-widest uppercase text-xs mt-2">Precision roles for technical minds</p>
+<h2 class="text-4xl font-bold tracking-tight text-on-surface">Open Positions</h2>
+<p class="text-secondary tracking-widest uppercase text-xs mt-2">Precision roles for technical minds</p>
+</div>
+<div class="text-on-surface-variant font-medium text-sm">
+                        Filter by: <span class="text-primary underline ml-2 cursor-pointer">All Roles</span>
 </div>
 </div>
 <div class="grid grid-cols-1 md:grid-cols-3 gap-1">
-<div class="group bg-card-dark p-10 h-full flex flex-col justify-between hover:bg-accent transition-all duration-300 text-left">
+<!-- Role Card 1 -->
+<div class="group bg-surface-container-lowest p-10 h-full flex flex-col justify-between hover:bg-primary transition-all duration-300 text-left">
 <div>
-<span class="text-text-muted group-hover:text-primary text-[10px] font-bold uppercase tracking-widest">Engineering</span>
-<h3 class="text-2xl font-bold mt-4 mb-2 text-white group-hover:text-primary">Senior Systems Architect</h3>
-<p class="text-text-muted group-hover:text-primary/80 text-sm leading-relaxed">Design and scale distributed infrastructure for global architectural platforms.</p>
+<span class="text-secondary group-hover:text-on-primary text-[10px] font-bold uppercase tracking-widest">Engineering</span>
+<h3 class="text-2xl font-bold mt-4 mb-2 group-hover:text-on-primary">Senior Systems Architect</h3>
+<p class="text-on-surface-variant group-hover:text-on-primary/80 text-sm leading-relaxed">Design and scale distributed infrastructure for global architectural platforms.</p>
 </div>
 <div class="mt-12 flex items-center justify-between">
-<span class="text-[10px] font-bold tracking-tighter text-text-muted group-hover:text-primary">REMOTE / FULL-TIME</span>
-<span class="material-symbols-outlined text-accent group-hover:text-primary transition-transform group-hover:translate-x-2">arrow_forward</span>
+<span class="text-[10px] font-bold tracking-tighter group-hover:text-on-primary">REMOTE / FULL-TIME</span>
+<span class="material-symbols-outlined text-primary group-hover:text-on-primary transition-transform group-hover:translate-x-2">arrow_forward</span>
 </div>
 </div>
-<div class="group bg-[#0d1b2a] p-10 h-full flex flex-col justify-between hover:bg-accent transition-all duration-300 text-left">
+<!-- Role Card 2 -->
+<div class="group bg-surface-container-low p-10 h-full flex flex-col justify-between hover:bg-primary transition-all duration-300 text-left">
 <div>
-<span class="text-text-muted group-hover:text-primary text-[10px] font-bold uppercase tracking-widest">Design</span>
-<h3 class="text-2xl font-bold mt-4 mb-2 text-white group-hover:text-primary">Creative Lead</h3>
-<p class="text-text-muted group-hover:text-primary/80 text-sm leading-relaxed">Define the visual language of high-performance architectural systems.</p>
+<span class="text-secondary group-hover:text-on-primary text-[10px] font-bold uppercase tracking-widest">Design</span>
+<h3 class="text-2xl font-bold mt-4 mb-2 group-hover:text-on-primary">Creative Lead</h3>
+<p class="text-on-surface-variant group-hover:text-on-primary/80 text-sm leading-relaxed">Define the visual language of high-performance architectural systems.</p>
 </div>
 <div class="mt-12 flex items-center justify-between">
-<span class="text-[10px] font-bold tracking-tighter text-text-muted group-hover:text-primary">LONDON / HYBRID</span>
-<span class="material-symbols-outlined text-accent group-hover:text-primary transition-transform group-hover:translate-x-2">arrow_forward</span>
+<span class="text-[10px] font-bold tracking-tighter group-hover:text-on-primary">LONDON / HYBRID</span>
+<span class="material-symbols-outlined text-primary group-hover:text-on-primary transition-transform group-hover:translate-x-2">arrow_forward</span>
 </div>
 </div>
-<div class="group bg-card-dark p-10 h-full flex flex-col justify-between hover:bg-accent transition-all duration-300 text-left">
+<!-- Role Card 3 -->
+<div class="group bg-surface-container-lowest p-10 h-full flex flex-col justify-between hover:bg-primary transition-all duration-300 text-left">
 <div>
-<span class="text-text-muted group-hover:text-primary text-[10px] font-bold uppercase tracking-widest">Engineering</span>
-<h3 class="text-2xl font-bold mt-4 mb-2 text-white group-hover:text-primary">Full-Stack Engineer</h3>
-<p class="text-text-muted group-hover:text-primary/80 text-sm leading-relaxed">Architect seamless bridges between complex backend logic and pixel-perfect UIs.</p>
+<span class="text-secondary group-hover:text-on-primary text-[10px] font-bold uppercase tracking-widest">Engineering</span>
+<h3 class="text-2xl font-bold mt-4 mb-2 group-hover:text-on-primary">Full-Stack Engineer</h3>
+<p class="text-on-surface-variant group-hover:text-on-primary/80 text-sm leading-relaxed">Architect seamless bridges between complex backend logic and pixel-perfect UIs.</p>
 </div>
 <div class="mt-12 flex items-center justify-between">
-<span class="text-[10px] font-bold tracking-tighter text-text-muted group-hover:text-primary">REMOTE / FULL-TIME</span>
-<span class="material-symbols-outlined text-accent group-hover:text-primary transition-transform group-hover:translate-x-2">arrow_forward</span>
+<span class="text-[10px] font-bold tracking-tighter group-hover:text-on-primary">REMOTE / FULL-TIME</span>
+<span class="material-symbols-outlined text-primary group-hover:text-on-primary transition-transform group-hover:translate-x-2">arrow_forward</span>
 </div>
 </div>
 </div>
 </div>
 </section>
-<section class="py-32 px-8 bg-[#0d1b2a]">
+<!-- Perks Section (Asymmetric) -->
+<section class="py-32 px-8 bg-surface-container-low">
 <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-24 items-center">
 <div class="relative order-2 md:order-1">
-<div class="aspect-square bg-card-dark flex items-center justify-center p-12">
-<div class="w-full h-full bg-cover bg-center" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDN-pNDbWC-qWnLcjVtMkYvfQYwj88MVSvfdyr1ntwUyjHoJK62_NrIsWeSIM_eG4sAmVw-10LuJarqpuBZotAEep0t8BmRdkOoylnq7l0w8KjN4jELmi4dzOLeAuPro2_UKGbMEzG8NqnilYraM7cakYmF5plqx7Y123q9JOF4sYTxx5SLQZ5JJ--nfx5YvcizDZJLl7zWNxJQXSBwFER64Ougjw-MUyn0ZyA97MVkveVfyXvdOZ4F5yor7I_F9lJhB4-O7Hft9ms')"></div>
+<div class="aspect-square bg-surface-container-highest flex items-center justify-center p-12">
+<div class="w-full h-full bg-cover bg-center" data-alt="Modern architectural workspace with high ceilings and light" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDN-pNDbWC-qWnLcjVtMkYvfQYwj88MVSvfdyr1ntwUyjHoJK62_NrIsWeSIM_eG4sAmVw-10LuJarqpuBZotAEep0t8BmRdkOoylnq7l0w8KjN4jELmi4dzOLeAuPro2_UKGbMEzG8NqnilYraM7cakYmF5plqx7Y123q9JOF4sYTxx5SLQZ5JJ--nfx5YvcizDZJLl7zWNxJQXSBwFER64Ougjw-MUyn0ZyA97MVkveVfyXvdOZ4F5yor7I_F9lJhB4-O7Hft9ms')"></div>
 </div>
-<div class="absolute -bottom-12 -right-12 bg-accent p-12 hidden md:block">
-<span class="text-primary text-5xl font-black">2024</span>
-<p class="text-primary text-xs uppercase tracking-widest font-bold mt-2">Peak Innovation</p>
+<div class="absolute -bottom-12 -right-12 bg-primary p-12 hidden md:block">
+<span class="text-on-primary text-5xl font-black">2024</span>
+<p class="text-on-primary text-xs uppercase tracking-widest font-bold mt-2">Peak Innovation</p>
 </div>
 </div>
 <div class="order-1 md:order-2 text-left">
-<h2 class="text-5xl font-black tracking-tighter mb-16 leading-none text-white">Designed for Mastery</h2>
+<h2 class="text-5xl font-black tracking-tighter mb-16 leading-none">Designed for Mastery</h2>
 <div class="space-y-12">
 <div class="flex gap-6">
-<span class="text-accent font-black text-2xl">01</span>
+<span class="text-primary font-black text-2xl">01</span>
 <div>
-<h4 class="text-xl font-bold mb-2 text-white">Remote-First</h4>
-<p class="text-text-muted text-sm leading-relaxed">Work from anywhere. Our infrastructure is built for seamless global collaboration without borders.</p>
+<h4 class="text-xl font-bold mb-2">Remote-First</h4>
+<p class="text-on-surface-variant text-sm leading-relaxed">Work from anywhere. Our infrastructure is built for seamless global collaboration without borders.</p>
 </div>
 </div>
 <div class="flex gap-6">
-<span class="text-accent font-black text-2xl">02</span>
+<span class="text-primary font-black text-2xl">02</span>
 <div>
-<h4 class="text-xl font-bold mb-2 text-white">High-Performance Stack</h4>
-<p class="text-text-muted text-sm leading-relaxed">No legacy debt. We use the most advanced tools to build the most resilient systems in the industry.</p>
+<h4 class="text-xl font-bold mb-2">High-Performance Stack</h4>
+<p class="text-on-surface-variant text-sm leading-relaxed">No legacy debt. We use the most advanced tools to build the most resilient systems in the industry.</p>
 </div>
 </div>
 <div class="flex gap-6">
-<span class="text-accent font-black text-2xl">03</span>
+<span class="text-primary font-black text-2xl">03</span>
 <div>
-<h4 class="text-xl font-bold mb-2 text-white">Professional Mastery</h4>
-<p class="text-text-muted text-sm leading-relaxed">Weekly workshops and annual mastery stipends to ensure you remain at the frontier of your craft.</p>
+<h4 class="text-xl font-bold mb-2">Professional Mastery</h4>
+<p class="text-on-surface-variant text-sm leading-relaxed">Weekly workshops and annual mastery stipends to ensure you remain at the frontier of your craft.</p>
 </div>
 </div>
 </div>
 </div>
 </div>
 </section>
-<section class="py-40 px-8 bg-background-dark">
+<!-- Culture Section -->
+<section class="py-40 px-8 bg-surface-container-lowest">
 <div class="max-w-7xl mx-auto text-left">
-<span class="text-text-muted font-bold uppercase tracking-[0.3em] text-[10px] mb-8 block">Our Philosophy</span>
-<blockquote class="text-4xl md:text-7xl font-black tracking-tighter leading-tight max-w-5xl italic mb-16 text-white">
-"We don't just build sites; <br /> we build <span class="text-accent underline decoration-4 underline-offset-8">revenue engines</span>."
-</blockquote>
-<div class="h-1 w-24 bg-accent mb-16"></div>
-<p class="text-text-muted max-w-2xl font-medium text-lg leading-relaxed">
-At Kaya Blue, we treat code like physical steel. Every line must serve a structural purpose. Every pixel must drive performance. We are looking for engineers and designers who obsess over the 'why' as much as the 'how'.
-</p>
+<span class="text-secondary font-bold uppercase tracking-[0.3em] text-[10px] mb-8 block">Our Philosophy</span>
+<blockquote class="text-4xl md:text-7xl font-black tracking-tighter leading-tight max-w-5xl italic mb-16">
+                    "We don't just build sites; <br/> we build <span class="text-primary underline decoration-4 underline-offset-8">revenue engines</span>."
+                </blockquote>
+<div class="h-1 w-24 bg-primary mb-16"></div>
+<p class="text-on-surface-variant max-w-2xl font-medium text-lg leading-relaxed">
+                    At Kaya Blue, we treat code like physical steel. Every line must serve a structural purpose. Every pixel must drive performance. We are looking for engineers and designers who obsess over the 'why' as much as the 'how'.
+                </p>
 </div>
 </section>
-<section class="py-24 px-8 bg-card-dark">
+<!-- CTA Section -->
+<section class="py-24 px-8 bg-on-primary-container">
 <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-start md:items-center gap-12">
 <div class="text-left">
-<h2 class="text-4xl font-bold text-white tracking-tight mb-4">Ready to architect the future?</h2>
-<p class="text-accent/60 font-medium">Don't see a role that fits? We're always looking for exceptional talent.</p>
+<h2 class="text-4xl font-bold text-on-primary tracking-tight mb-4">Ready to architect the future?</h2>
+<p class="text-primary-fixed/60 font-medium">Don't see a role that fits? We're always looking for exceptional talent.</p>
 </div>
-<a href="/book-a-call" class="inline-block bg-accent text-primary px-12 py-5 font-bold uppercase tracking-widest text-xs hover:opacity-90 transition-opacity whitespace-nowrap">
-Send Spontaneous Application
-</a>
+<a href="/book-a-call" class="bg-primary text-on-primary px-12 py-5 font-bold uppercase tracking-widest text-xs hover:bg-primary-container transition-colors whitespace-nowrap">Send Spontaneous Application</a>
 </div>
 </section>
 </main>
+
 </BaseLayout>
