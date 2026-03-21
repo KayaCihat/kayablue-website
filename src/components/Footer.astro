@@ -1,0 +1,37 @@
+---
+// src/components/Footer.astro
+---
+<footer class="footer">
+  <div class="container footer__inner">
+    <span class="footer__brand">Kayablue</span>
+    <p class="footer__copy">&copy; {new Date().getFullYear()} Kayablue. All rights reserved.</p>
+    <a href="/book-a-call" class="footer__cta">Book a Call</a>
+  </div>
+</footer>
+
+<style>
+  .footer {
+    border-top: 1px solid var(--color-border);
+    padding: var(--spacing-lg) 0;
+    margin-top: var(--spacing-xl);
+  }
+  .footer__inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: var(--spacing-md);
+    flex-wrap: wrap;
+  }
+  .footer__brand {
+    font-weight: 700;
+  }
+  .footer__copy {
+    font-size: 0.85rem;
+    opacity: 0.6;
+  }
+  .footer__cta {
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: var(--color-accent);
+  }
+</style>
