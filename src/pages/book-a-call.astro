@@ -1,159 +1,214 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
 ---
-<BaseLayout title="Book a Call" description="Schedule a strategy session with Kaya Blue">
+<BaseLayout title="Book a Call | Kaya Blue" description="Schedule a free strategy session with Kaya Blue.">
 <main class="pt-20 pb-24 px-6 aura-glow">
 <div class="max-w-7xl mx-auto">
+<!-- Hero Section -->
 <header class="text-center mb-20 max-w-4xl mx-auto">
-<span class="font-mono text-[12px] uppercase tracking-widest text-accent mb-4 block">Schedule an appointment</span>
-<h1 class="text-5xl md:text-7xl font-black text-white tracking-tighter leading-none mb-6">
-Let's talk about your project
-</h1>
-<p class="text-lg md:text-xl text-text-muted max-w-2xl mx-auto leading-relaxed">
-Engineering high-performance digital systems for organizations that demand technical prestige and uncompromising speed.
-</p>
+<span class="font-mono text-[12px] uppercase tracking-widest text-primary mb-4 block" style="">Schedule an appointment</span>
+<h1 class="text-5xl md:text-7xl font-black text-on-background tracking-tighter leading-none mb-6" style="">
+                Let's talk about your project
+            </h1>
+<p class="text-lg md:text-xl text-on-surface-variant max-w-2xl mx-auto leading-relaxed" style="">
+                Engineering high-performance digital systems for organizations that demand technical prestige and uncompromising speed.
+            </p>
 </header>
 <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
-<!-- Contact Form -->
+<!-- Booking Interface (Left/Center) -->
 <section class="lg:col-span-8 bg-surface-container rounded-xl p-8 border border-outline-variant/20 shadow-2xl">
-<h3 class="text-xl font-bold text-white mb-6">Send Us a Message</h3>
-<form id="contact-form" novalidate class="space-y-6">
-<input type="text" name="website" tabindex="-1" autocomplete="off" class="hidden" />
-<div>
-<label for="name" class="block text-[12px] text-text-muted uppercase tracking-wide mb-2">Full Name <span class="text-accent">*</span></label>
-<input type="text" id="name" name="name" required class="w-full bg-surface-container-highest border border-outline-variant/30 text-white rounded-lg px-4 py-3 focus:outline-none focus:border-accent transition-colors" placeholder="Your name" />
+<div class="flex flex-col md:flex-row gap-8">
+<!-- Calendar Placeholder View -->
+<div class="flex-1">
+<h3 class="text-xl font-bold text-on-surface mb-6" style="">Select a Date &amp; Time</h3>
+<div class="grid grid-cols-7 gap-2 mb-8">
+<div class="text-[10px] uppercase tracking-widest text-on-surface-variant text-center pb-2" style="">Mon</div>
+<div class="text-[10px] uppercase tracking-widest text-on-surface-variant text-center pb-2" style="">Tue</div>
+<div class="text-[10px] uppercase tracking-widest text-on-surface-variant text-center pb-2" style="">Wed</div>
+<div class="text-[10px] uppercase tracking-widest text-on-surface-variant text-center pb-2" style="">Thu</div>
+<div class="text-[10px] uppercase tracking-widest text-on-surface-variant text-center pb-2" style="">Fri</div>
+<div class="text-[10px] uppercase tracking-widest text-on-surface-variant text-center pb-2" style="">Sat</div>
+<div class="text-[10px] uppercase tracking-widest text-on-surface-variant text-center pb-2" style="">Sun</div>
+<!-- Dummy dates -->
+<div class="aspect-square flex items-center justify-center rounded-lg text-on-surface-variant/40" style="">28</div>
+<div class="aspect-square flex items-center justify-center rounded-lg text-on-surface-variant/40" style="">29</div>
+<div class="aspect-square flex items-center justify-center rounded-lg text-on-surface-variant/40" style="">30</div>
+<div class="aspect-square flex items-center justify-center rounded-lg bg-surface-container-highest text-on-surface cursor-pointer hover:border hover:border-primary transition-all" style="">1</div>
+<div class="aspect-square flex items-center justify-center rounded-lg bg-surface-container-highest text-on-surface cursor-pointer hover:border hover:border-primary transition-all" style="">2</div>
+<div class="aspect-square flex items-center justify-center rounded-lg bg-surface-container-highest text-on-surface cursor-pointer hover:border hover:border-primary transition-all" style="">3</div>
+<div class="aspect-square flex items-center justify-center rounded-lg bg-surface-container-highest text-on-surface cursor-pointer hover:border hover:border-primary transition-all" style="">4</div>
+<div class="aspect-square flex items-center justify-center rounded-lg bg-primary text-on-primary font-bold shadow-[0_0_10px_rgba(100,255,218,0.4)]" style="">5</div>
+<div class="aspect-square flex items-center justify-center rounded-lg bg-surface-container-highest text-on-surface cursor-pointer hover:border hover:border-primary transition-all" style="">6</div>
+<div class="aspect-square flex items-center justify-center rounded-lg bg-surface-container-highest text-on-surface cursor-pointer hover:border hover:border-primary transition-all" style="">7</div>
+<div class="aspect-square flex items-center justify-center rounded-lg bg-surface-container-highest text-on-surface cursor-pointer hover:border hover:border-primary transition-all" style="">8</div>
+<div class="aspect-square flex items-center justify-center rounded-lg bg-surface-container-highest text-on-surface cursor-pointer hover:border hover:border-primary transition-all" style="">9</div>
+<div class="aspect-square flex items-center justify-center rounded-lg bg-surface-container-highest text-on-surface cursor-pointer hover:border hover:border-primary transition-all" style="">10</div>
+<div class="aspect-square flex items-center justify-center rounded-lg bg-surface-container-highest text-on-surface cursor-pointer hover:border hover:border-primary transition-all" style="">11</div>
 </div>
-<div>
-<label for="email" class="block text-[12px] text-text-muted uppercase tracking-wide mb-2">Email Address <span class="text-accent">*</span></label>
-<input type="email" id="email" name="email" required class="w-full bg-surface-container-highest border border-outline-variant/30 text-white rounded-lg px-4 py-3 focus:outline-none focus:border-accent transition-colors" placeholder="you@company.com" />
 </div>
-<div>
-<label for="phone" class="block text-[12px] text-text-muted uppercase tracking-wide mb-2">Phone <span class="text-text-muted">(optional)</span></label>
-<input type="tel" id="phone" name="phone" class="w-full bg-surface-container-highest border border-outline-variant/30 text-white rounded-lg px-4 py-3 focus:outline-none focus:border-accent transition-colors" placeholder="+1 (555) 000-0000" />
+<!-- Time Selection -->
+<div class="w-full md:w-64">
+<h3 class="text-xl font-bold text-on-surface mb-6" style="">Friday, Dec 5</h3>
+<div class="space-y-3 max-h-[300px] overflow-y-auto pr-2 custom-scrollbar">
+<button class="w-full py-3 rounded-lg border border-primary/30 text-primary font-bold hover:bg-primary/10 transition-colors" style="">09:00 AM</button>
+<button class="w-full py-3 rounded-lg border border-outline-variant text-on-surface hover:bg-surface-container-highest transition-colors" style="">10:30 AM</button>
+<button class="w-full py-3 rounded-lg border border-outline-variant text-on-surface hover:bg-surface-container-highest transition-colors" style="">01:00 PM</button>
+<button class="w-full py-3 rounded-lg border border-outline-variant text-on-surface hover:bg-surface-container-highest transition-colors" style="">02:30 PM</button>
+<button class="w-full py-3 rounded-lg border border-outline-variant text-on-surface hover:bg-surface-container-highest transition-colors" style="">04:00 PM</button>
 </div>
-<div>
-<label for="preferredDate" class="block text-[12px] text-text-muted uppercase tracking-wide mb-2">Preferred Date <span class="text-text-muted">(optional)</span></label>
-<input type="date" id="preferredDate" name="preferredDate" class="w-full bg-surface-container-highest border border-outline-variant/30 text-white rounded-lg px-4 py-3 focus:outline-none focus:border-accent transition-colors" />
-</div>
-<div>
-<label for="message" class="block text-[12px] text-text-muted uppercase tracking-wide mb-2">Message <span class="text-accent">*</span></label>
-<textarea id="message" name="message" required rows="5" class="w-full bg-surface-container-highest border border-outline-variant/30 text-white rounded-lg px-4 py-3 focus:outline-none focus:border-accent transition-colors resize-vertical" placeholder="Tell us about your project..."></textarea>
-</div>
-<button type="submit" class="w-full py-4 bg-accent text-primary font-black rounded-lg shadow-[0_0_20px_rgba(100,255,218,0.3)] active:scale-[0.98] transition-all hover:opacity-90 text-lg">
-Send Message
-</button>
-<p id="form-status" aria-live="polite" class="text-sm min-h-[1.4em]"></p>
+<form id="contact-form" class="mt-8 space-y-4">
+  <input type="text" name="name" placeholder="Your Name" required class="w-full px-4 py-3 rounded-lg bg-surface-container-highest border border-outline-variant/20 text-on-surface placeholder:text-on-surface-variant focus:outline-none focus:border-primary transition-colors" />
+  <input type="email" name="email" placeholder="Your Email" required class="w-full px-4 py-3 rounded-lg bg-surface-container-highest border border-outline-variant/20 text-on-surface placeholder:text-on-surface-variant focus:outline-none focus:border-primary transition-colors" />
+  <input type="tel" name="phone" placeholder="Phone Number" class="w-full px-4 py-3 rounded-lg bg-surface-container-highest border border-outline-variant/20 text-on-surface placeholder:text-on-surface-variant focus:outline-none focus:border-primary transition-colors" />
+  <input type="date" name="preferredDate" class="w-full px-4 py-3 rounded-lg bg-surface-container-highest border border-outline-variant/20 text-on-surface focus:outline-none focus:border-primary transition-colors" />
+  <textarea name="message" rows="3" placeholder="Tell us about your project" class="w-full px-4 py-3 rounded-lg bg-surface-container-highest border border-outline-variant/20 text-on-surface placeholder:text-on-surface-variant focus:outline-none focus:border-primary transition-colors resize-none"></textarea>
+  <input type="text" name="website" class="hidden" tabindex="-1" autocomplete="off" />
+  <button id="submit-btn" type="submit" class="w-full py-4 bg-primary text-on-primary font-black rounded-lg shadow-[0_0_20px_rgba(100,255,218,0.3)] active:scale-[0.98] transition-all">
+    Book a Call
+  </button>
 </form>
+<div id="success-msg" class="hidden text-center py-12"><h3 class="text-2xl font-bold text-white mb-4">Thanks! We'll be in touch soon.</h3><p class="text-text-muted">We'll review your request and reach out within 24 hours.</p></div>
+<div id="error-msg" class="hidden mt-4 text-red-400 text-sm text-center"></div>
+</div>
+</div>
 </section>
-<!-- Contact Details -->
+<!-- Contact Details (Right) -->
 <aside class="lg:col-span-4 space-y-8">
 <div class="bg-surface-container-low p-8 rounded-xl border border-outline-variant/10">
-<h3 class="font-mono text-[10px] uppercase tracking-widest text-accent mb-6">Contact Channels</h3>
+<h3 class="font-mono text-[10px] uppercase tracking-widest text-primary mb-6" style="">Contact Channels</h3>
 <div class="space-y-6">
 <div class="flex items-start gap-4">
 <div class="bg-surface-container-highest p-2 rounded-lg">
-<span class="material-symbols-outlined text-accent">mail</span>
+<span class="material-symbols-outlined text-primary" style="">mail</span>
 </div>
 <div>
-<p class="text-[12px] text-text-muted uppercase tracking-wide">Email</p>
-<a class="text-lg font-bold text-white hover:text-accent transition-colors" href="mailto:hello@kayablue.com">hello@kayablue.com</a>
+<p class="text-[12px] text-on-surface-variant uppercase tracking-wide" style="">Email</p>
+<a class="text-lg font-bold text-on-surface hover:text-primary transition-colors" href="mailto:hello@glodinas.web" style="">hello@glodinas.web</a>
 </div>
 </div>
 <div class="flex items-start gap-4">
 <div class="bg-surface-container-highest p-2 rounded-lg">
-<span class="material-symbols-outlined text-accent">call</span>
+<span class="material-symbols-outlined text-primary" style="">call</span>
 </div>
 <div>
-<p class="text-[12px] text-text-muted uppercase tracking-wide">Studio Line</p>
-<p class="text-lg font-bold text-white">+1 (555) 000-1234</p>
+<p class="text-[12px] text-on-surface-variant uppercase tracking-wide" style="">Studio Line</p>
+<p class="text-lg font-bold text-on-surface" style="">+1 (555) 0123-987</p>
 </div>
 </div>
 <div class="flex items-start gap-4">
 <div class="bg-surface-container-highest p-2 rounded-lg">
-<span class="material-symbols-outlined text-accent">location_on</span>
+<span class="material-symbols-outlined text-primary" style="">location_on</span>
 </div>
 <div>
-<p class="text-[12px] text-text-muted uppercase tracking-wide">Address</p>
-<p class="text-lg font-bold text-white">128 Matrix Plaza, Suite 400<br>San Francisco, CA 94103</p>
+<p class="text-[12px] text-on-surface-variant uppercase tracking-wide" style="">Address</p>
+<p class="text-lg font-bold text-on-surface" style="">128 Matrix Plaza, Suite 400<br>San Francisco, CA 94103</p>
 </div>
 </div>
 </div>
 </div>
+<!-- Small Map/Abstract card -->
 <div class="relative h-48 rounded-xl overflow-hidden bg-surface-container-highest">
-<img class="w-full h-full object-cover opacity-40 grayscale contrast-125" alt="Stylized dark map of San Francisco area" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD6QeepSyh0ea8cVHZ_mlguJjQOp9Qf2Mddk3am_3qWUEPAVFboIZg8YxnlHrCvQGpIH7xAq5O0anbDT52IRWG_6gNMEN032t_hFO-1d0iVp-rY8E2slvggQYjRYucyMZFma9R7Yx5k5U3Poiujok_1ZSNJnjYyBP0JZpPUTYylglONGBg5PDHWvhGp6I3sBC2eyfAUQBxA13efJ5t5Vdil2ZlIASfeO9jFNuiTk0uwd9LnDW6sm4pXLK4gICSRuwT6-ns7yVyNXhw" />
+<img class="w-full h-full object-cover opacity-40 grayscale contrast-125" data-alt="Stylized dark map of San Francisco area" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD6QeepSyh0ea8cVHZ_mlguJjQOp9Qf2Mddk3am_3qWUEPAVFboIZg8YxnlHrCvQGpIH7xAq5O0anbDT52IRWG_6gNMEN032t_hFO-1d0iVp-rY8E2slvggQYjRYucyMZFma9R7Yx5k5U3Poiujok_1ZSNJnjYyBP0JZpPUTYylglONGBg5PDHWvhGp6I3sBC2eyfAUQBxA13efJ5t5Vdil2ZlIASfeO9jFNuiTk0uwd9LnDW6sm4pXLK4gICSRuwT6-ns7yVyNXhw" style="">
 <div class="absolute inset-0 bg-gradient-to-t from-surface-container-low to-transparent"></div>
 <div class="absolute bottom-4 left-4">
-<span class="font-mono text-[10px] text-accent">HQ: LAT 37.77 / LONG -122.41</span>
+<span class="font-mono text-[10px] text-primary" style="">HQ: LAT 37.77 / LONG -122.41</span>
 </div>
 </div>
 </aside>
 </div>
-<!-- Common Inquiries -->
+<!-- Trust Section (Common Inquiries) -->
 <section class="mt-32">
 <div class="flex items-end justify-between mb-12 border-b border-outline-variant/30 pb-6">
 <div>
-<h2 class="text-3xl font-black text-white tracking-tight">Common Inquiries</h2>
-<p class="text-text-muted mt-2">Handling objections before we even start.</p>
+<h2 class="text-3xl font-black text-on-background tracking-tight" style="">Common Inquiries</h2>
+<p class="text-on-surface-variant mt-2" style="">Handling objections before we even start.</p>
 </div>
-<span class="material-symbols-outlined text-accent text-4xl">info</span>
+<span class="material-symbols-outlined text-primary text-4xl" style="">info</span>
 </div>
 <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-<div class="bg-surface-container p-8 rounded-xl border border-outline-variant/10 hover:border-accent/50 transition-all group">
+<!-- Inquiry Card 1 -->
+<div class="bg-surface-container p-8 rounded-xl border border-outline-variant/10 hover:border-primary/50 transition-all group">
 <div class="mb-6 flex justify-between items-start">
-<span class="font-mono text-[12px] text-accent">01</span>
-<span class="material-symbols-outlined text-text-muted group-hover:text-accent transition-colors">schedule</span>
+<span class="font-mono text-[12px] text-primary" style="">01</span>
+<span class="material-symbols-outlined text-on-surface-variant group-hover:text-primary transition-colors" style="">schedule</span>
 </div>
-<h4 class="text-xl font-bold text-white mb-3">Project Timelines</h4>
-<p class="text-text-muted leading-relaxed">Typical architecture phases last 6-12 weeks depending on complexity. We prioritize milestones over hours.</p>
+<h4 class="text-xl font-bold text-on-surface mb-3" style="">Project Timelines</h4>
+<p class="text-on-surface-variant leading-relaxed" style="">Typical architecture phases last 6-12 weeks depending on complexity. We prioritize milestones over hours.</p>
 </div>
-<div class="bg-surface-container p-8 rounded-xl border border-outline-variant/10 hover:border-accent/50 transition-all group">
+<!-- Inquiry Card 2 -->
+<div class="bg-surface-container p-8 rounded-xl border border-outline-variant/10 hover:border-primary/50 transition-all group">
 <div class="mb-6 flex justify-between items-start">
-<span class="font-mono text-[12px] text-accent">02</span>
-<span class="material-symbols-outlined text-text-muted group-hover:text-accent transition-colors">payments</span>
+<span class="font-mono text-[12px] text-primary" style="">02</span>
+<span class="material-symbols-outlined text-on-surface-variant group-hover:text-primary transition-colors" style="">payments</span>
 </div>
-<h4 class="text-xl font-bold text-white mb-3">Investment Model</h4>
-<p class="text-text-muted leading-relaxed">We work on a value-based fixed pricing or monthly technical retainer. No hidden overheads or surprise invoices.</p>
+<h4 class="text-xl font-bold text-on-surface mb-3" style="">Investment Model</h4>
+<p class="text-on-surface-variant leading-relaxed" style="">We work on a value-based fixed pricing or monthly technical retainer. No hidden overheads or surprise invoices.</p>
 </div>
-<div class="bg-surface-container p-8 rounded-xl border border-outline-variant/10 hover:border-accent/50 transition-all group">
+<!-- Inquiry Card 3 -->
+<div class="bg-surface-container p-8 rounded-xl border border-outline-variant/10 hover:border-primary/50 transition-all group">
 <div class="mb-6 flex justify-between items-start">
-<span class="font-mono text-[12px] text-accent">03</span>
-<span class="material-symbols-outlined text-text-muted group-hover:text-accent transition-colors">terminal</span>
+<span class="font-mono text-[12px] text-primary" style="">03</span>
+<span class="material-symbols-outlined text-on-surface-variant group-hover:text-primary transition-colors" style="">terminal</span>
 </div>
-<h4 class="text-xl font-bold text-white mb-3">Tech Stack</h4>
-<p class="text-text-muted leading-relaxed">Agnostic but performance-obsessed. Specialized in Next.js, Astro, and scalable cloud infrastructures.</p>
+<h4 class="text-xl font-bold text-on-surface mb-3" style="">Tech Stack</h4>
+<p class="text-on-surface-variant leading-relaxed" style="">Agnostic but performance-obsessed. Specialized in Next.js, Rust, and scalable cloud infrastructures.</p>
 </div>
 </div>
 </section>
 </div>
 </main>
-<script>
-  const form = document.getElementById('contact-form') as HTMLFormElement;
-  const status = document.getElementById('form-status')!;
 
-  form.addEventListener('submit', async (e) => {
+
+<script>
+  const form = document.getElementById('contact-form');
+  const submitBtn = document.getElementById('submit-btn');
+  const successMsg = document.getElementById('success-msg');
+  const errorMsg = document.getElementById('error-msg');
+
+  form?.addEventListener('submit', async (e) => {
     e.preventDefault();
+    if (!form || !submitBtn) return;
+
     const data = Object.fromEntries(new FormData(form));
-    status.textContent = 'Sending...';
-    status.className = 'text-sm min-h-[1.4em]';
+
+    if (data.website) {
+      form.classList.add('hidden');
+      successMsg?.classList.remove('hidden');
+      return;
+    }
+
+    submitBtn.disabled = true;
+    submitBtn.textContent = 'Sending...';
+    errorMsg?.classList.add('hidden');
+
     try {
       const res = await fetch('https://api.kayablue.nl/api/contact', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(data),
       });
-      const json = await res.json();
-      if (json.success) {
-        status.textContent = "Thanks! We'll be in touch shortly.";
-        status.className = 'text-sm min-h-[1.4em] text-green-400';
-        form.reset();
+
+      if (res.ok) {
+        form.classList.add('hidden');
+        successMsg?.classList.remove('hidden');
       } else {
-        status.textContent = json.error || 'Something went wrong. Please try again.';
-        status.className = 'text-sm min-h-[1.4em] text-red-400';
+        const json = await res.json().catch(() => ({}));
+        if (errorMsg) {
+          errorMsg.textContent = json.error || 'Something went wrong. Please try again.';
+          errorMsg.classList.remove('hidden');
+        }
+        submitBtn.disabled = false;
+        submitBtn.textContent = 'Send Message';
       }
     } catch {
-      status.textContent = 'Network error. Please try again.';
-      status.className = 'text-sm min-h-[1.4em] text-red-400';
+      if (errorMsg) {
+        errorMsg.textContent = 'Network error. Please check your connection and try again.';
+        errorMsg.classList.remove('hidden');
+      }
+      submitBtn.disabled = false;
+      submitBtn.textContent = 'Send Message';
     }
   });
 </script>
+
 </BaseLayout>
