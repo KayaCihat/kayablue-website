@@ -1,127 +1,185 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
 ---
-<BaseLayout title="Our Work" description="Real websites, real results — Kayablue portfolio of digital projects">
+<BaseLayout title="Our Work | Kaya Blue" description="Portfolio of web design and development projects.">
 <main class="flex-1">
+<!-- Hero Section -->
 <section class="pt-24 pb-16 px-6 lg:px-20 max-w-7xl mx-auto">
 <div class="flex flex-col items-start gap-6 mb-12">
 <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-accent/10 border border-accent/20 w-fit">
 <span class="flex h-2 w-2 rounded-full bg-accent"></span>
 <span class="text-xs font-bold uppercase tracking-widest text-accent">EXPERTISE</span>
 </div>
-<h1 class="text-5xl lg:text-7xl font-black text-white tracking-tight leading-none">Our Work</h1>
-<p class="text-xl text-text-muted max-w-xl font-medium leading-relaxed">Real websites, real results. We build digital architecture that transforms businesses into industry leaders.</p>
+<h1 class="text-5xl lg:text-7xl font-black text-slate-900 dark:text-white tracking-tight leading-none">
+                        Our Work
+                    </h1>
+<p class="text-xl text-slate-600 dark:text-text-muted max-w-xl font-medium leading-relaxed">
+                        Real websites, real results. We build digital architecture that transforms businesses into industry leaders.
+                    </p>
 </div>
+<!-- Filtering Options -->
 <div class="flex flex-wrap gap-4 mb-16">
-<button class="px-6 py-2 rounded-full bg-accent/10 border border-accent/30 text-accent text-sm font-bold tracking-wide">All Projects</button>
-<button class="px-6 py-2 rounded-full border border-slate-800 text-text-muted hover:border-accent hover:text-accent transition-all text-sm font-medium tracking-wide">Real Estate</button>
-<button class="px-6 py-2 rounded-full border border-slate-800 text-text-muted hover:border-accent hover:text-accent transition-all text-sm font-medium tracking-wide">Staffing</button>
-<button class="px-6 py-2 rounded-full border border-slate-800 text-text-muted hover:border-accent hover:text-accent transition-all text-sm font-medium tracking-wide">Finance</button>
+<button class="px-6 py-2 rounded-full bg-accent/10 border border-accent/30 text-accent text-sm font-bold tracking-wide">
+                        All Projects
+                    </button>
+<button class="px-6 py-2 rounded-full border border-slate-300 dark:border-slate-800 text-slate-600 dark:text-text-muted hover:border-accent hover:text-accent transition-all text-sm font-medium tracking-wide">
+                        Real Estate
+                    </button>
+<button class="px-6 py-2 rounded-full border border-slate-300 dark:border-slate-800 text-slate-600 dark:text-text-muted hover:border-accent hover:text-accent transition-all text-sm font-medium tracking-wide">
+                        Staffing
+                    </button>
+<button class="px-6 py-2 rounded-full border border-slate-300 dark:border-slate-800 text-slate-600 dark:text-text-muted hover:border-accent hover:text-accent transition-all text-sm font-medium tracking-wide">
+                        Finance
+                    </button>
 </div>
+<!-- Project Grid -->
 <div class="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-12">
-<div class="group bg-card-dark rounded-xl overflow-hidden shadow-xl transition-all duration-300 hover:translate-y-[-8px] border border-slate-800 hover:border-accent/50">
-<div class="aspect-[16/10] overflow-hidden bg-slate-900">
-<img class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500 scale-105 group-hover:scale-100 opacity-90" alt="Modern high-rise architectural glass building at dusk" src="https://lh3.googleusercontent.com/aida-public/AB6AXuABAkiRRYizIouuXC3vXEcgpWYlXMy-U6xcjjzq3p9XEDluGV8lwut1FjV8QiJ3rR0SkAQvK5T0zNVk1WY8geXP0e4iDLoeVoaxUM2Al1QO2T9IRgkmcjICvWJbsakWl6aiDdrgRaQhK3fa9A6ONk72x5Imlp43K7tCYgfUGm3WX8RTf0c_1rTgDt_3Hk0sER7wqZyFUcq2XpAzUgZqt43Dle5P2WcmYveiB53ycQtYgkLJu0NF-6QiOjOBbapUjAX5uBBsUSY_g4s" />
+<!-- Card 1: Skyline Properties -->
+<div class="group bg-white dark:bg-card-dark rounded-xl overflow-hidden shadow-xl transition-all duration-300 hover:translate-y-[-8px] border border-slate-200 dark:border-slate-800 hover:border-accent/50">
+<div class="aspect-[16/10] overflow-hidden bg-slate-200 dark:bg-slate-900">
+<img class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500 scale-105 group-hover:scale-100 opacity-90" data-alt="Modern high-rise architectural glass building at dusk" src="https://lh3.googleusercontent.com/aida-public/AB6AXuABAkiRRYizIouuXC3vXEcgpWYlXMy-U6xcjjzq3p9XEDluGV8lwut1FjV8QiJ3rR0SkAQvK5T0zNVk1WY8geXP0e4iDLoeVoaxUM2Al1QO2T9IRgkmcjICvWJbsakWl6aiDdrgRaQhK3fa9A6ONk72x5Imlp43K7tCYgfUGm3WX8RTf0c_1rTgDt_3Hk0sER7wqZyFUcq2XpAzUgZqt43Dle5P2WcmYveiB53ycQtYgkLJu0NF-6QiOjOBbapUjAX5uBBsUSY_g4s"/>
 </div>
 <div class="p-8">
 <div class="flex gap-3 mb-4">
 <span class="text-[10px] uppercase tracking-widest text-accent font-bold bg-accent/10 px-2 py-1 rounded">Real Estate</span>
-<span class="text-[10px] uppercase tracking-widest text-slate-400 font-bold bg-slate-800 px-2 py-1 rounded">UI/UX</span>
+<span class="text-[10px] uppercase tracking-widest text-slate-400 font-bold bg-slate-100 dark:bg-slate-800 px-2 py-1 rounded">UI/UX</span>
 </div>
-<h3 class="text-2xl font-bold text-white mb-3 tracking-tight group-hover:text-accent transition-colors">Skyline Properties</h3>
-<p class="text-text-muted text-sm mb-6 leading-relaxed">Luxury listing platform with immersive 3D tours and high-performance lead generation funnels.</p>
-<a class="inline-flex items-center gap-2 text-accent text-sm font-bold uppercase tracking-widest group/link" href="#">View Project <span class="material-symbols-outlined text-[18px] group-hover/link:translate-x-1 transition-transform">arrow_forward</span></a>
+<h3 class="text-2xl font-bold text-slate-900 dark:text-white mb-3 tracking-tight group-hover:text-accent transition-colors">Skyline Properties</h3>
+<p class="text-slate-600 dark:text-text-muted text-sm mb-6 leading-relaxed">Luxury listing platform with immersive 3D tours and high-performance lead generation funnels.</p>
+<a class="inline-flex items-center gap-2 text-accent text-sm font-bold uppercase tracking-widest group/link" href="#">
+                                View Project
+                                <span class="material-symbols-outlined text-[18px] group-hover/link:translate-x-1 transition-transform">arrow_forward</span>
+</a>
 </div>
 </div>
-<div class="group bg-card-dark rounded-xl overflow-hidden shadow-xl transition-all duration-300 hover:translate-y-[-8px] border border-slate-800 hover:border-accent/50">
-<div class="aspect-[16/10] overflow-hidden bg-slate-900">
-<img class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500 scale-105 group-hover:scale-100 opacity-90" alt="Abstract data visualization dashboard with neon accents" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBeb1oDwdUt-ZXq5VfyuI-nxq7heVLhF5U-9uKwIIyJv7HJGRjtnwJlIPDWphll_6y15XuKv6Ys-RYH1OZlwLr0Gb8KbR_YcMvPF0Sk-LkPPX1N36Befdxl3lVLeCOiwQNLCuXVSG6g885l0vNIlEmeahoszqSKZXS_MOTY9u_nWoX4uveJAmAuphdyg2lOLTwVGoxIrG9tGKi_T_2iFGASTIj_B2K_0DN1RE24JKrRVNj_VIOa18fZTsS_fSNVitimmoB4cNQmvts" />
+<!-- Card 2: TalentFlow Portal -->
+<div class="group bg-white dark:bg-card-dark rounded-xl overflow-hidden shadow-xl transition-all duration-300 hover:translate-y-[-8px] border border-slate-200 dark:border-slate-800 hover:border-accent/50">
+<div class="aspect-[16/10] overflow-hidden bg-slate-200 dark:bg-slate-900">
+<img class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500 scale-105 group-hover:scale-100 opacity-90" data-alt="Abstract data visualization dashboard with neon accents" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBeb1oDwdUt-ZXq5VfyuI-nxq7heVLhF5U-9uKwIIyJv7HJGRjtnwJlIPDWphll_6y15XuKv6Ys-RYH1OZlwLr0Gb8KbR_YcMvPF0Sk-LkPPX1N36Befdxl3lVLeCOiwQNLCuXVSG6g885l0vNIlEmeahoszqSKZXS_MOTY9u_nWoX4uveJAmAuphdyg2lOLTwVGoxIrG9tGKi_T_2iFGASTIj_B2K_0DN1RE24JKrRVNj_VIOa18fZTsS_fSNVitimmoB4cNQmvts"/>
 </div>
 <div class="p-8">
 <div class="flex gap-3 mb-4">
 <span class="text-[10px] uppercase tracking-widest text-accent font-bold bg-accent/10 px-2 py-1 rounded">Staffing</span>
-<span class="text-[10px] uppercase tracking-widest text-slate-400 font-bold bg-slate-800 px-2 py-1 rounded">SaaS</span>
+<span class="text-[10px] uppercase tracking-widest text-slate-400 font-bold bg-slate-100 dark:bg-slate-800 px-2 py-1 rounded">SaaS</span>
 </div>
-<h3 class="text-2xl font-bold text-white mb-3 tracking-tight group-hover:text-accent transition-colors">TalentFlow Portal</h3>
-<p class="text-text-muted text-sm mb-6 leading-relaxed">Integrated recruitment dashboard managing 10k+ active candidates with AI matching tech.</p>
-<a class="inline-flex items-center gap-2 text-accent text-sm font-bold uppercase tracking-widest group/link" href="#">View Project <span class="material-symbols-outlined text-[18px] group-hover/link:translate-x-1 transition-transform">arrow_forward</span></a>
+<h3 class="text-2xl font-bold text-slate-900 dark:text-white mb-3 tracking-tight group-hover:text-accent transition-colors">TalentFlow Portal</h3>
+<p class="text-slate-600 dark:text-text-muted text-sm mb-6 leading-relaxed">Integrated recruitment dashboard managing 10k+ active candidates with AI matching tech.</p>
+<a class="inline-flex items-center gap-2 text-accent text-sm font-bold uppercase tracking-widest group/link" href="#">
+                                View Project
+                                <span class="material-symbols-outlined text-[18px] group-hover/link:translate-x-1 transition-transform">arrow_forward</span>
+</a>
 </div>
 </div>
-<div class="group bg-card-dark rounded-xl overflow-hidden shadow-xl transition-all duration-300 hover:translate-y-[-8px] border border-slate-800 hover:border-accent/50">
-<div class="aspect-[16/10] overflow-hidden bg-slate-900">
-<img class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500 scale-105 group-hover:scale-100 opacity-90" alt="Clean financial charts on a dark background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBPEYJedlZYHs6kwbh5hLsCvXYqAN1Oho8llnmp6jR3immaVbgxbg1tn7GfR0sKboQ-ySRIbUV39cWfIOoM5rizJyNQdbiJr4gW3AU7-Ua7zs1WwffOA4pxXZxy3ai3rHOcrzMt13-reOmKzSxoxZ5wC23YDvEQDJzZVUh_dkW_KXonZjinh84BVzHMo_dS7b4URK1EEJrqaibpz9uRx8jQtLB4ZC08AvJHTd_Bb3sBMZpFoLT4ALpEagnGUN1G1rPIuS5NDUy10vk" />
+<!-- Card 3: Vantage Wealth -->
+<div class="group bg-white dark:bg-card-dark rounded-xl overflow-hidden shadow-xl transition-all duration-300 hover:translate-y-[-8px] border border-slate-200 dark:border-slate-800 hover:border-accent/50">
+<div class="aspect-[16/10] overflow-hidden bg-slate-200 dark:bg-slate-900">
+<img class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500 scale-105 group-hover:scale-100 opacity-90" data-alt="Clean financial charts on a dark background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBPEYJedlZYHs6kwbh5hLsCvXYqAN1Oho8llnmp6jR3immaVbgxbg1tn7GfR0sKboQ-ySRIbUV39cWfIOoM5rizJyNQdbiJr4gW3AU7-Ua7zs1WwffOA4pxXZxy3ai3rHOcrzMt13-reOmKzSxoxZ5wC23YDvEQDJzZVUh_dkW_KXonZjinh84BVzHMo_dS7b4URK1EEJrqaibpz9uRx8jQtLB4ZC08AvJHTd_Bb3sBMZpFoLT4ALpEagnGUN1G1rPIuS5NDUy10vk"/>
 </div>
 <div class="p-8">
 <div class="flex gap-3 mb-4">
 <span class="text-[10px] uppercase tracking-widest text-accent font-bold bg-accent/10 px-2 py-1 rounded">Finance</span>
-<span class="text-[10px] uppercase tracking-widest text-slate-400 font-bold bg-slate-800 px-2 py-1 rounded">FinTech</span>
+<span class="text-[10px] uppercase tracking-widest text-slate-400 font-bold bg-slate-100 dark:bg-slate-800 px-2 py-1 rounded">FinTech</span>
 </div>
-<h3 class="text-2xl font-bold text-white mb-3 tracking-tight group-hover:text-accent transition-colors">Vantage Wealth</h3>
-<p class="text-text-muted text-sm mb-6 leading-relaxed">Premium asset management site featuring real-time market data and secure client portals.</p>
-<a class="inline-flex items-center gap-2 text-accent text-sm font-bold uppercase tracking-widest group/link" href="#">View Project <span class="material-symbols-outlined text-[18px] group-hover/link:translate-x-1 transition-transform">arrow_forward</span></a>
+<h3 class="text-2xl font-bold text-slate-900 dark:text-white mb-3 tracking-tight group-hover:text-accent transition-colors">Vantage Wealth</h3>
+<p class="text-slate-600 dark:text-text-muted text-sm mb-6 leading-relaxed">Premium asset management site featuring real-time market data and secure client portals.</p>
+<a class="inline-flex items-center gap-2 text-accent text-sm font-bold uppercase tracking-widest group/link" href="#">
+                                View Project
+                                <span class="material-symbols-outlined text-[18px] group-hover/link:translate-x-1 transition-transform">arrow_forward</span>
+</a>
 </div>
 </div>
-<div class="group bg-card-dark rounded-xl overflow-hidden shadow-xl transition-all duration-300 hover:translate-y-[-8px] border border-slate-800 hover:border-accent/50">
-<div class="aspect-[16/10] overflow-hidden bg-slate-900">
-<img class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500 scale-105 group-hover:scale-100 opacity-90" alt="Microchip circuitry with glowing cyan light paths" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBNssTcw5zbEl32eXfrXYz3D8LLv3K4x-4ow4g-OlYS-ptsKJGYdqI13hsHvaf2kjlEZ7hH3obxJkJhTRS-uGDAE4RyHVN05SuQtBk4GyLHd7ifxw1UoKFd8_-li3lgtIvqnftGybpWQtSdKGTI-YCRn2LdI8m-CRke6vjzUhQkMiwL1iQpxadkqgTuGuQEpNjLAr_491GXPEnoHbokIBjvEH5OXooZsT_z8u6QtR9p4Ntl5CmD_ZSGBQBqkvYqwZJIldWuODuqWo8" />
+<!-- Card 4: FlowTech Platform -->
+<div class="group bg-white dark:bg-card-dark rounded-xl overflow-hidden shadow-xl transition-all duration-300 hover:translate-y-[-8px] border border-slate-200 dark:border-slate-800 hover:border-accent/50">
+<div class="aspect-[16/10] overflow-hidden bg-slate-200 dark:bg-slate-900">
+<img class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500 scale-105 group-hover:scale-100 opacity-90" data-alt="Microchip circuitry with glowing cyan light paths" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBNssTcw5zbEl32eXfrXYz3D8LLv3K4x-4ow4g-OlYS-ptsKJGYdqI13hsHvaf2kjlEZ7hH3obxJkJhTRS-uGDAE4RyHVN05SuQtBk4GyLHd7ifxw1UoKFd8_-li3lgtIvqnftGybpWQtSdKGTI-YCRn2LdI8m-CRke6vjzUhQkMiwL1iQpxadkqgTuGuQEpNjLAr_491GXPEnoHbokIBjvEH5OXooZsT_z8u6QtR9p4Ntl5CmD_ZSGBQBqkvYqwZJIldWuODuqWo8"/>
 </div>
 <div class="p-8">
 <div class="flex gap-3 mb-4">
 <span class="text-[10px] uppercase tracking-widest text-accent font-bold bg-accent/10 px-2 py-1 rounded">Industry</span>
-<span class="text-[10px] uppercase tracking-widest text-slate-400 font-bold bg-slate-800 px-2 py-1 rounded">Web App</span>
+<span class="text-[10px] uppercase tracking-widest text-slate-400 font-bold bg-slate-100 dark:bg-slate-800 px-2 py-1 rounded">Web App</span>
 </div>
-<h3 class="text-2xl font-bold text-white mb-3 tracking-tight group-hover:text-accent transition-colors">FlowTech Platform</h3>
-<p class="text-text-muted text-sm mb-6 leading-relaxed">Operational efficiency tracking for manufacturing hubs, featuring live sensory data.</p>
-<a class="inline-flex items-center gap-2 text-accent text-sm font-bold uppercase tracking-widest group/link" href="#">View Project <span class="material-symbols-outlined text-[18px] group-hover/link:translate-x-1 transition-transform">arrow_forward</span></a>
+<h3 class="text-2xl font-bold text-slate-900 dark:text-white mb-3 tracking-tight group-hover:text-accent transition-colors">FlowTech Platform</h3>
+<p class="text-slate-600 dark:text-text-muted text-sm mb-6 leading-relaxed">Operational efficiency tracking for manufacturing hubs, featuring live sensory data.</p>
+<a class="inline-flex items-center gap-2 text-accent text-sm font-bold uppercase tracking-widest group/link" href="#">
+                                View Project
+                                <span class="material-symbols-outlined text-[18px] group-hover/link:translate-x-1 transition-transform">arrow_forward</span>
+</a>
 </div>
 </div>
 </div>
 </section>
-<section class="bg-card-dark/30 py-24 px-6 lg:px-20 border-y border-slate-800">
+<!-- Testimonials Section -->
+<section class="bg-slate-50 dark:bg-card-dark/30 py-24 px-6 lg:px-20 border-y border-slate-200 dark:border-slate-800">
 <div class="max-w-7xl mx-auto">
 <div class="flex flex-col items-center text-center mb-16">
 <h2 class="text-accent font-mono text-sm tracking-widest mb-4">TESTIMONIALS</h2>
-<h3 class="text-3xl lg:text-4xl font-bold text-white">Voices of Success</h3>
+<h3 class="text-3xl lg:text-4xl font-bold dark:text-white">Voices of Success</h3>
 <div class="h-1 w-20 bg-accent mt-6 rounded-full"></div>
 </div>
 <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-<div class="p-8 rounded-xl bg-card-dark border-l-4 border-accent shadow-sm italic flex flex-col justify-between">
-<div><p class="text-lg text-slate-200 mb-8">"Kayablue transformed our digital presence from a standard brochure site into a high-converting machine. The attention to technical detail is unmatched."</p></div>
+<!-- Testimonial 1 -->
+<div class="p-8 rounded-xl bg-white dark:bg-card-dark border-l-4 border-accent shadow-sm italic flex flex-col justify-between">
+<div>
+<p class="text-lg dark:text-slate-200 mb-8">"Glodinas transformed our digital presence from a standard brochure site into a high-converting machine. The attention to technical detail is unmatched."</p>
+</div>
 <div class="flex items-center gap-4 not-italic">
-<div class="w-12 h-12 rounded-full bg-slate-800 overflow-hidden"><img class="w-full h-full object-cover" alt="Professional male headshot" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCcU7kw19XRZuEppxV1iPJcd2FAtBofcrGvtEjk6RDf1SAUVd_6rEPV8Hpbw45ug8A4Dk-ykcW1YuykgtPThVvMD4dYPbVv7De9H7lQMwarnJamLbKH034yUJHskI3zz3i1TzPsaCcBzYXs_x32p4W8M9GmSH10HC05Z7L0-GxrwyBwUYJJFCvfocT1p7luZkK9OflQR6hngBP3LUSoBx53GC140hiiU8zNRaJFxMUOuoFG-53OAGo_0kRjBUqpkaDVMProBa_JpVw" /></div>
-<div><h4 class="font-bold text-white text-sm">Marcus Chen</h4><p class="text-[10px] uppercase tracking-widest text-text-muted">CEO, Skyline Properties</p></div>
+<div class="w-12 h-12 rounded-full bg-slate-200 dark:bg-slate-800 overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="Professional male headshot" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCcU7kw19XRZuEppxV1iPJcd2FAtBofcrGvtEjk6RDf1SAUVd_6rEPV8Hpbw45ug8A4Dk-ykcW1YuykgtPThVvMD4dYPbVv7De9H7lQMwarnJamLbKH034yUJHskI3zz3i1TzPsaCcBzYXs_x32p4W8M9GmSH10HC05Z7L0-GxrwyBwUYJJFCvfocT1p7luZkK9OflQR6hngBP3LUSoBx53GC140hiiU8zNRaJFxMUOuoFG-53OAGo_0kRjBUqpkaDVMProBa_JpVw"/>
+</div>
+<div>
+<h4 class="font-bold dark:text-white text-sm">Marcus Chen</h4>
+<p class="text-[10px] uppercase tracking-widest text-text-muted">CEO, Skyline Properties</p>
 </div>
 </div>
-<div class="p-8 rounded-xl bg-card-dark border-l-4 border-accent shadow-sm italic flex flex-col justify-between">
-<div><p class="text-lg text-slate-200 mb-8">"The TalentFlow Portal has halved our time-to-hire. Their engineering team understood our complex workflow immediately."</p></div>
+</div>
+<!-- Testimonial 2 -->
+<div class="p-8 rounded-xl bg-white dark:bg-card-dark border-l-4 border-accent shadow-sm italic flex flex-col justify-between">
+<div>
+<p class="text-lg dark:text-slate-200 mb-8">"The TalentFlow Portal has halved our time-to-hire. Their engineering team understood our complex workflow immediately."</p>
+</div>
 <div class="flex items-center gap-4 not-italic">
-<div class="w-12 h-12 rounded-full bg-slate-800 overflow-hidden"><img class="w-full h-full object-cover" alt="Professional female headshot" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD46LXmW4ZrfbAjn7wdqo-usTDdPHMiBcvs2_R6mPw2C9xrcB8s4Z7TpyH-VCCrYjWEVsg6EEE0_u6nqxtnL-0WkGBjhX2wWpPLGmrV36kqJM4Tr1TPhVJ1dMiW-bJLq_lybIprAdTGDzZTNWaoEJjk5cmCb944eABmtJrxJw8GGNgTvV3krXNig3JGO-9HNu2Bngh0INi-6nFL_JyLP-2_z6HZh__gf22UCGv4UZNUq8YfD5db6OrLWqu2ENdxt_TUY2G8MILT_Fo" /></div>
-<div><h4 class="font-bold text-white text-sm">Sarah Jenkins</h4><p class="text-[10px] uppercase tracking-widest text-text-muted">CTO, TalentFlow</p></div>
+<div class="w-12 h-12 rounded-full bg-slate-200 dark:bg-slate-800 overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="Professional female headshot" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD46LXmW4ZrfbAjn7wdqo-usTDdPHMiBcvs2_R6mPw2C9xrcB8s4Z7TpyH-VCCrYjWEVsg6EEE0_u6nqxtnL-0WkGBjhX2wWpPLGmrV36kqJM4Tr1TPhVJ1dMiW-bJLq_lybIprAdTGDzZTNWaoEJjk5cmCb944eABmtJrxJw8GGNgTvV3krXNig3JGO-9HNu2Bngh0INi-6nFL_JyLP-2_z6HZh__gf22UCGv4UZNUq8YfD5db6OrLWqu2ENdxt_TUY2G8MILT_Fo"/>
+</div>
+<div>
+<h4 class="font-bold dark:text-white text-sm">Sarah Jenkins</h4>
+<p class="text-[10px] uppercase tracking-widest text-text-muted">CTO, TalentFlow</p>
 </div>
 </div>
-<div class="p-8 rounded-xl bg-card-dark border-l-4 border-accent shadow-sm italic flex flex-col justify-between">
-<div><p class="text-lg text-slate-200 mb-8">"Unparalleled luxury. They don't just build websites; they build digital experiences that command authority in the wealth space."</p></div>
+</div>
+<!-- Testimonial 3 -->
+<div class="p-8 rounded-xl bg-white dark:bg-card-dark border-l-4 border-accent shadow-sm italic flex flex-col justify-between">
+<div>
+<p class="text-lg dark:text-slate-200 mb-8">"Unparalleled luxury. They don't just build websites; they build digital experiences that command authority in the wealth space."</p>
+</div>
 <div class="flex items-center gap-4 not-italic">
-<div class="w-12 h-12 rounded-full bg-slate-800 overflow-hidden"><img class="w-full h-full object-cover" alt="Male professional headshot" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCmMgorc90UFGa_dnkJdy5ossPQwFjjJcucmatF2dIDhEZwpILR_GJ9t2huQzgLeLs_S9MEBKrMZNQIE9etg4FLHm2BV9ocALvUh4CNDcy2lFFVfGd18nDxRXWBa4TO5kohiIvDBevrRqjvZiTRUyHjzf6_Hg4aoJX-vj9Cg_g4hNHc4DUiUKcQbm0Pj5FYfYDIgZhrlTFxglAXEJ73-ikQMLmHrjgpV9DMWMVaoElFtDJc-o3t1pvV_agEGqqwGYcPI9TMrFgr0J0" /></div>
-<div><h4 class="font-bold text-white text-sm">David Vorne</h4><p class="text-[10px] uppercase tracking-widest text-text-muted">Director, Vantage Wealth</p></div>
+<div class="w-12 h-12 rounded-full bg-slate-200 dark:bg-slate-800 overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="Male professional headshot" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCmMgorc90UFGa_dnkJdy5ossPQwFjjJcucmatF2dIDhEZwpILR_GJ9t2huQzgLeLs_S9MEBKrMZNQIE9etg4FLHm2BV9ocALvUh4CNDcy2lFFVfGd18nDxRXWBa4TO5kohiIvDBevrRqjvZiTRUyHjzf6_Hg4aoJX-vj9Cg_g4hNHc4DUiUKcQbm0Pj5FYfYDIgZhrlTFxglAXEJ73-ikQMLmHrjgpV9DMWMVaoElFtDJc-o3t1pvV_agEGqqwGYcPI9TMrFgr0J0"/>
+</div>
+<div>
+<h4 class="font-bold dark:text-white text-sm">David Vorne</h4>
+<p class="text-[10px] uppercase tracking-widest text-text-muted">Director, Vantage Wealth</p>
+</div>
 </div>
 </div>
 </div>
 </div>
 </section>
+<!-- Call to Action (Standard Homepage Style) -->
 <section class="py-24 px-6 lg:px-20 max-w-7xl mx-auto text-center">
 <div class="p-12 lg:p-20 rounded-2xl bg-gradient-to-br from-card-dark to-primary border border-slate-800 relative overflow-hidden">
 <div class="absolute top-0 right-0 -mr-20 -mt-20 w-64 h-64 bg-accent/10 rounded-full blur-3xl"></div>
 <div class="absolute bottom-0 left-0 -ml-20 -mb-20 w-64 h-64 bg-accent/10 rounded-full blur-3xl"></div>
 <div class="relative z-10 max-w-2xl mx-auto">
-<h2 class="text-4xl lg:text-5xl font-black mb-6 text-white">Ready to build your legacy?</h2>
+<h2 class="text-4xl lg:text-5xl font-black mb-6 dark:text-white">Ready to build your legacy?</h2>
 <p class="text-xl text-text-muted mb-10 leading-relaxed">Let's architect a digital solution that positions your brand at the absolute forefront of your industry.</p>
 <div class="flex flex-col sm:flex-row justify-center gap-6">
-<a href="/book-a-call" class="inline-block bg-accent text-primary px-10 py-5 rounded-lg font-bold text-lg hover:scale-105 transition-transform accent-glow">Start Your Project</a>
-<a href="/services" class="inline-block border border-slate-700 text-white px-10 py-5 rounded-lg font-bold text-lg hover:bg-white/10 transition-colors">View Pricing</a>
+<a href="/book-a-call" class="bg-accent text-primary px-10 py-5 rounded-lg font-bold text-lg hover:scale-105 transition-transform accent-glow">Start Your Project</a>
+<a href="#" class="border border-slate-700 text-white px-10 py-5 rounded-lg font-bold text-lg hover:bg-white/10 transition-colors">View Pricing</a>
 </div>
 </div>
 </div>
 </section>
 </main>
+
 </BaseLayout>
