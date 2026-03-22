@@ -4,211 +4,432 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 <BaseLayout title="Book a Call | Kaya Blue" description="Schedule a free strategy session with Kaya Blue.">
 <main class="pt-20 pb-24 px-6 aura-glow">
 <div class="max-w-7xl mx-auto">
+
 <!-- Hero Section -->
 <header class="text-center mb-20 max-w-4xl mx-auto">
-<span class="font-mono text-[12px] uppercase tracking-widest text-accent mb-4 block" style="">Schedule an appointment</span>
-<h1 class="text-5xl md:text-7xl font-black text-on-background tracking-tighter leading-none mb-6" style="">
-                Let's talk about your project
-            </h1>
-<p class="text-lg md:text-xl text-on-surface-variant max-w-2xl mx-auto leading-relaxed" style="">
-                Engineering high-performance digital systems for organizations that demand technical prestige and uncompromising speed.
-            </p>
+<span class="font-mono text-[12px] uppercase tracking-widest text-accent mb-4 block">Schedule an appointment</span>
+<h1 class="text-5xl md:text-7xl font-black text-on-background tracking-tighter leading-none mb-6">
+  Let's talk about your project
+</h1>
+<p class="text-lg md:text-xl text-on-surface-variant max-w-2xl mx-auto leading-relaxed">
+  Engineering high-performance digital systems for organizations that demand technical prestige and uncompromising speed.
+</p>
 </header>
+
 <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
+
 <!-- Booking Interface (Left/Center) -->
 <section class="lg:col-span-8 bg-surface-container rounded-xl p-8 border border-outline-variant/20 shadow-2xl">
 <div class="flex flex-col md:flex-row gap-8">
-<!-- Calendar Placeholder View -->
-<div class="flex-1">
-<h3 class="text-xl font-bold text-on-surface mb-6" style="">Select a Date &amp; Time</h3>
-<div class="grid grid-cols-7 gap-2 mb-8">
-<div class="text-[10px] uppercase tracking-widest text-on-surface-variant text-center pb-2" style="">Mon</div>
-<div class="text-[10px] uppercase tracking-widest text-on-surface-variant text-center pb-2" style="">Tue</div>
-<div class="text-[10px] uppercase tracking-widest text-on-surface-variant text-center pb-2" style="">Wed</div>
-<div class="text-[10px] uppercase tracking-widest text-on-surface-variant text-center pb-2" style="">Thu</div>
-<div class="text-[10px] uppercase tracking-widest text-on-surface-variant text-center pb-2" style="">Fri</div>
-<div class="text-[10px] uppercase tracking-widest text-on-surface-variant text-center pb-2" style="">Sat</div>
-<div class="text-[10px] uppercase tracking-widest text-on-surface-variant text-center pb-2" style="">Sun</div>
-<!-- Dummy dates -->
-<div class="aspect-square flex items-center justify-center rounded-lg text-on-surface-variant/40" style="">28</div>
-<div class="aspect-square flex items-center justify-center rounded-lg text-on-surface-variant/40" style="">29</div>
-<div class="aspect-square flex items-center justify-center rounded-lg text-on-surface-variant/40" style="">30</div>
-<div class="aspect-square flex items-center justify-center rounded-lg bg-surface-container-highest text-on-surface cursor-pointer hover:border hover:border-accent transition-all" style="">1</div>
-<div class="aspect-square flex items-center justify-center rounded-lg bg-surface-container-highest text-on-surface cursor-pointer hover:border hover:border-accent transition-all" style="">2</div>
-<div class="aspect-square flex items-center justify-center rounded-lg bg-surface-container-highest text-on-surface cursor-pointer hover:border hover:border-accent transition-all" style="">3</div>
-<div class="aspect-square flex items-center justify-center rounded-lg bg-surface-container-highest text-on-surface cursor-pointer hover:border hover:border-accent transition-all" style="">4</div>
-<div class="aspect-square flex items-center justify-center rounded-lg bg-accent text-primary font-bold shadow-[0_0_10px_rgba(100,255,218,0.4)]" style="">5</div>
-<div class="aspect-square flex items-center justify-center rounded-lg bg-surface-container-highest text-on-surface cursor-pointer hover:border hover:border-accent transition-all" style="">6</div>
-<div class="aspect-square flex items-center justify-center rounded-lg bg-surface-container-highest text-on-surface cursor-pointer hover:border hover:border-accent transition-all" style="">7</div>
-<div class="aspect-square flex items-center justify-center rounded-lg bg-surface-container-highest text-on-surface cursor-pointer hover:border hover:border-accent transition-all" style="">8</div>
-<div class="aspect-square flex items-center justify-center rounded-lg bg-surface-container-highest text-on-surface cursor-pointer hover:border hover:border-accent transition-all" style="">9</div>
-<div class="aspect-square flex items-center justify-center rounded-lg bg-surface-container-highest text-on-surface cursor-pointer hover:border hover:border-accent transition-all" style="">10</div>
-<div class="aspect-square flex items-center justify-center rounded-lg bg-surface-container-highest text-on-surface cursor-pointer hover:border hover:border-accent transition-all" style="">11</div>
+
+<!-- Calendar -->
+<div class="flex-1 min-w-0">
+  <h3 class="text-xl font-bold text-on-surface mb-4">Select a Date &amp; Time</h3>
+
+  <!-- Month navigation -->
+  <div class="flex items-center justify-between mb-3">
+    <button id="prev-month" type="button" class="p-2 rounded-lg hover:bg-surface-container-highest transition-colors text-on-surface">
+      <span class="material-symbols-outlined text-sm leading-none">chevron_left</span>
+    </button>
+    <span id="month-label" class="font-bold text-on-surface text-sm"></span>
+    <button id="next-month" type="button" class="p-2 rounded-lg hover:bg-surface-container-highest transition-colors text-on-surface">
+      <span class="material-symbols-outlined text-sm leading-none">chevron_right</span>
+    </button>
+  </div>
+
+  <!-- Day-of-week headers (Mon first) -->
+  <div class="grid grid-cols-7 gap-1 mb-1">
+    <div class="text-[9px] uppercase tracking-widest text-on-surface-variant text-center">Mon</div>
+    <div class="text-[9px] uppercase tracking-widest text-on-surface-variant text-center">Tue</div>
+    <div class="text-[9px] uppercase tracking-widest text-on-surface-variant text-center">Wed</div>
+    <div class="text-[9px] uppercase tracking-widest text-on-surface-variant text-center">Thu</div>
+    <div class="text-[9px] uppercase tracking-widest text-on-surface-variant text-center">Fri</div>
+    <div class="text-[9px] uppercase tracking-widest text-on-surface-variant text-center">Sat</div>
+    <div class="text-[9px] uppercase tracking-widest text-on-surface-variant text-center">Sun</div>
+  </div>
+
+  <!-- Calendar grid (populated by JS) -->
+  <div id="calendar-grid" class="grid grid-cols-7 gap-1"></div>
 </div>
-</div>
-<!-- Time Selection -->
-<div class="w-full md:w-64">
-<h3 class="text-xl font-bold text-on-surface mb-6" style="">Friday, Dec 5</h3>
-<div class="space-y-3 max-h-[300px] overflow-y-auto pr-2 custom-scrollbar">
-<button class="w-full py-3 rounded-lg border border-accent/30 text-accent font-bold hover:bg-accent/10 transition-colors" style="">09:00 AM</button>
-<button class="w-full py-3 rounded-lg border border-outline-variant text-on-surface hover:bg-surface-container-highest transition-colors" style="">10:30 AM</button>
-<button class="w-full py-3 rounded-lg border border-outline-variant text-on-surface hover:bg-surface-container-highest transition-colors" style="">01:00 PM</button>
-<button class="w-full py-3 rounded-lg border border-outline-variant text-on-surface hover:bg-surface-container-highest transition-colors" style="">02:30 PM</button>
-<button class="w-full py-3 rounded-lg border border-outline-variant text-on-surface hover:bg-surface-container-highest transition-colors" style="">04:00 PM</button>
-</div>
-<form id="contact-form" class="mt-8 space-y-4">
-  <input type="text" name="name" placeholder="Your Name" required class="w-full px-4 py-3 rounded-lg bg-surface-container-highest border border-outline-variant/20 text-on-surface placeholder:text-on-surface-variant focus:outline-none focus:border-accent transition-colors" />
-  <input type="email" name="email" placeholder="Your Email" required class="w-full px-4 py-3 rounded-lg bg-surface-container-highest border border-outline-variant/20 text-on-surface placeholder:text-on-surface-variant focus:outline-none focus:border-accent transition-colors" />
-  <input type="tel" name="phone" placeholder="Phone Number" class="w-full px-4 py-3 rounded-lg bg-surface-container-highest border border-outline-variant/20 text-on-surface placeholder:text-on-surface-variant focus:outline-none focus:border-accent transition-colors" />
-  <input type="date" name="preferredDate" class="w-full px-4 py-3 rounded-lg bg-surface-container-highest border border-outline-variant/20 text-on-surface focus:outline-none focus:border-accent transition-colors" />
-  <textarea name="message" rows="3" placeholder="Tell us about your project" class="w-full px-4 py-3 rounded-lg bg-surface-container-highest border border-outline-variant/20 text-on-surface placeholder:text-on-surface-variant focus:outline-none focus:border-accent transition-colors resize-none"></textarea>
-  <input type="text" name="website" class="hidden" tabindex="-1" autocomplete="off" />
-  <button id="submit-btn" type="submit" class="w-full py-4 bg-accent text-primary font-black rounded-lg shadow-[0_0_20px_rgba(100,255,218,0.3)] active:scale-[0.98] transition-all">
-    Book a Call
-  </button>
-</form>
-<div id="success-msg" class="hidden text-center py-12"><h3 class="text-2xl font-bold text-white mb-4">Thanks! We'll be in touch soon.</h3><p class="text-text-muted">We'll review your request and reach out within 24 hours.</p></div>
-<div id="error-msg" class="hidden mt-4 text-red-400 text-sm text-center"></div>
+
+<!-- Slots + Form -->
+<div class="w-full md:w-60 flex-shrink-0">
+
+  <h3 id="slots-label" class="text-base font-bold text-on-surface mb-3 hidden"></h3>
+
+  <!-- Loading spinner -->
+  <div id="slots-loading" class="hidden text-center py-6 text-text-muted">
+    <span class="material-symbols-outlined text-2xl">progress_activity</span>
+    <p class="text-xs mt-1">Loading…</p>
+  </div>
+
+  <!-- Slots list -->
+  <div id="slots-grid" class="space-y-2 max-h-[200px] overflow-y-auto pr-1 mb-3"></div>
+
+  <!-- No slots -->
+  <p id="no-slots-msg" class="hidden text-text-muted text-xs text-center py-3">No slots available for this date.</p>
+
+  <!-- Form -->
+  <form id="contact-form" class="mt-2 space-y-3">
+    <input type="hidden" id="selected-date" name="date" />
+    <input type="hidden" id="selected-time" name="time" />
+    <input type="text" name="name" placeholder="Your Name" required
+      class="w-full px-3 py-2.5 rounded-lg bg-surface-container-highest border border-outline-variant/20 text-on-surface placeholder:text-on-surface-variant focus:outline-none focus:border-accent transition-colors text-sm" />
+    <input type="email" name="email" placeholder="Your Email" required
+      class="w-full px-3 py-2.5 rounded-lg bg-surface-container-highest border border-outline-variant/20 text-on-surface placeholder:text-on-surface-variant focus:outline-none focus:border-accent transition-colors text-sm" />
+    <input type="tel" name="phone" placeholder="Phone Number"
+      class="w-full px-3 py-2.5 rounded-lg bg-surface-container-highest border border-outline-variant/20 text-on-surface placeholder:text-on-surface-variant focus:outline-none focus:border-accent transition-colors text-sm" />
+    <textarea name="message" rows="2" placeholder="Tell us about your project"
+      class="w-full px-3 py-2.5 rounded-lg bg-surface-container-highest border border-outline-variant/20 text-on-surface placeholder:text-on-surface-variant focus:outline-none focus:border-accent transition-colors resize-none text-sm"></textarea>
+    <input type="text" name="website" class="hidden" tabindex="-1" autocomplete="off" />
+    <button id="submit-btn" type="submit" disabled
+      class="w-full py-3 bg-accent text-primary font-black rounded-lg shadow-[0_0_20px_rgba(100,255,218,0.3)] active:scale-[0.98] transition-all opacity-50 cursor-not-allowed text-sm">
+      Book a Call
+    </button>
+  </form>
+
+  <!-- Success -->
+  <div id="success-msg" class="hidden text-center py-6">
+    <span class="material-symbols-outlined text-accent text-3xl block mb-2">check_circle</span>
+    <h3 class="text-lg font-bold text-white mb-1">Booked!</h3>
+    <p class="text-text-muted text-xs">Check your email for confirmation.</p>
+  </div>
+
+  <!-- Error -->
+  <div id="error-msg" class="hidden mt-2 text-red-400 text-xs text-center"></div>
+
 </div>
 </div>
 </section>
+
 <!-- Contact Details (Right) -->
 <aside class="lg:col-span-4 space-y-8">
 <div class="bg-surface-container-low p-8 rounded-xl border border-outline-variant/10">
-<h3 class="font-mono text-[10px] uppercase tracking-widest text-accent mb-6" style="">Contact Channels</h3>
+<h3 class="font-mono text-[10px] uppercase tracking-widest text-accent mb-6">Contact Channels</h3>
 <div class="space-y-6">
 <div class="flex items-start gap-4">
 <div class="bg-surface-container-highest p-2 rounded-lg">
-<span class="material-symbols-outlined text-accent" style="">mail</span>
+<span class="material-symbols-outlined text-accent">mail</span>
 </div>
 <div>
-<p class="text-[12px] text-on-surface-variant uppercase tracking-wide" style="">Email</p>
-<a class="text-lg font-bold text-on-surface hover:text-accent transition-colors" href="mailto:hello@kayablue.nl" style="">hello@kayablue.nl</a>
+<p class="text-[12px] text-on-surface-variant uppercase tracking-wide">Email</p>
+<a class="text-lg font-bold text-on-surface hover:text-accent transition-colors" href="mailto:hello@kayablue.nl">hello@kayablue.nl</a>
 </div>
 </div>
 <div class="flex items-start gap-4">
 <div class="bg-surface-container-highest p-2 rounded-lg">
-<span class="material-symbols-outlined text-accent" style="">call</span>
+<span class="material-symbols-outlined text-accent">call</span>
 </div>
 <div>
-<p class="text-[12px] text-on-surface-variant uppercase tracking-wide" style="">Studio Line</p>
-<p class="text-lg font-bold text-on-surface" style="">+1 (555) 0123-987</p>
+<p class="text-[12px] text-on-surface-variant uppercase tracking-wide">Studio Line</p>
+<p class="text-lg font-bold text-on-surface">+1 (555) 0123-987</p>
 </div>
 </div>
 <div class="flex items-start gap-4">
 <div class="bg-surface-container-highest p-2 rounded-lg">
-<span class="material-symbols-outlined text-accent" style="">location_on</span>
+<span class="material-symbols-outlined text-accent">location_on</span>
 </div>
 <div>
-<p class="text-[12px] text-on-surface-variant uppercase tracking-wide" style="">Address</p>
-<p class="text-lg font-bold text-on-surface" style="">128 Matrix Plaza, Suite 400<br>San Francisco, CA 94103</p>
+<p class="text-[12px] text-on-surface-variant uppercase tracking-wide">Address</p>
+<p class="text-lg font-bold text-on-surface">128 Matrix Plaza, Suite 400<br>San Francisco, CA 94103</p>
 </div>
 </div>
 </div>
 </div>
-<!-- Small Map/Abstract card -->
+<!-- Map card -->
 <div class="relative h-48 rounded-xl overflow-hidden bg-surface-container-highest">
-<img class="w-full h-full object-cover opacity-40 grayscale contrast-125" data-alt="Stylized dark map of San Francisco area" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD6QeepSyh0ea8cVHZ_mlguJjQOp9Qf2Mddk3am_3qWUEPAVFboIZg8YxnlHrCvQGpIH7xAq5O0anbDT52IRWG_6gNMEN032t_hFO-1d0iVp-rY8E2slvggQYjRYucyMZFma9R7Yx5k5U3Poiujok_1ZSNJnjYyBP0JZpPUTYylglONGBg5PDHWvhGp6I3sBC2eyfAUQBxA13efJ5t5Vdil2ZlIASfeO9jFNuiTk0uwd9LnDW6sm4pXLK4gICSRuwT6-ns7yVyNXhw" style="">
+<img class="w-full h-full object-cover opacity-40 grayscale contrast-125" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD6QeepSyh0ea8cVHZ_mlguJjQOp9Qf2Mddk3am_3qWUEPAVFboIZg8YxnlHrCvQGpIH7xAq5O0anbDT52IRWG_6gNMEN032t_hFO-1d0iVp-rY8E2slvggQYjRYucyMZFma9R7Yx5k5U3Poiujok_1ZSNJnjYyBP0JZpPUTYylglONGBg5PDHWvhGp6I3sBC2eyfAUQBxA13efJ5t5Vdil2ZlIASfeO9jFNuiTk0uwd9LnDW6sm4pXLK4gICSRuwT6-ns7yVyNXhw" alt="" />
 <div class="absolute inset-0 bg-gradient-to-t from-surface-container-low to-transparent"></div>
 <div class="absolute bottom-4 left-4">
-<span class="font-mono text-[10px] text-accent" style="">HQ: LAT 37.77 / LONG -122.41</span>
+<span class="font-mono text-[10px] text-accent">HQ: LAT 37.77 / LONG -122.41</span>
 </div>
 </div>
 </aside>
+
 </div>
+
 <!-- Trust Section (Common Inquiries) -->
 <section class="mt-32">
 <div class="flex items-end justify-between mb-12 border-b border-outline-variant/30 pb-6">
 <div>
-<h2 class="text-3xl font-black text-on-background tracking-tight" style="">Common Inquiries</h2>
-<p class="text-on-surface-variant mt-2" style="">Handling objections before we even start.</p>
+<h2 class="text-3xl font-black text-on-background tracking-tight">Common Inquiries</h2>
+<p class="text-on-surface-variant mt-2">Handling objections before we even start.</p>
 </div>
-<span class="material-symbols-outlined text-accent text-4xl" style="">info</span>
+<span class="material-symbols-outlined text-accent text-4xl">info</span>
 </div>
 <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-<!-- Inquiry Card 1 -->
 <div class="bg-surface-container p-8 rounded-xl border border-outline-variant/10 hover:border-accent/50 transition-all group">
 <div class="mb-6 flex justify-between items-start">
-<span class="font-mono text-[12px] text-accent" style="">01</span>
-<span class="material-symbols-outlined text-on-surface-variant group-hover:text-accent transition-colors" style="">schedule</span>
+<span class="font-mono text-[12px] text-accent">01</span>
+<span class="material-symbols-outlined text-on-surface-variant group-hover:text-accent transition-colors">schedule</span>
 </div>
-<h4 class="text-xl font-bold text-on-surface mb-3" style="">Project Timelines</h4>
-<p class="text-on-surface-variant leading-relaxed" style="">Typical architecture phases last 6-12 weeks depending on complexity. We prioritize milestones over hours.</p>
+<h4 class="text-xl font-bold text-on-surface mb-3">Project Timelines</h4>
+<p class="text-on-surface-variant leading-relaxed">Typical architecture phases last 6-12 weeks depending on complexity. We prioritize milestones over hours.</p>
 </div>
-<!-- Inquiry Card 2 -->
 <div class="bg-surface-container p-8 rounded-xl border border-outline-variant/10 hover:border-accent/50 transition-all group">
 <div class="mb-6 flex justify-between items-start">
-<span class="font-mono text-[12px] text-accent" style="">02</span>
-<span class="material-symbols-outlined text-on-surface-variant group-hover:text-accent transition-colors" style="">payments</span>
+<span class="font-mono text-[12px] text-accent">02</span>
+<span class="material-symbols-outlined text-on-surface-variant group-hover:text-accent transition-colors">payments</span>
 </div>
-<h4 class="text-xl font-bold text-on-surface mb-3" style="">Investment Model</h4>
-<p class="text-on-surface-variant leading-relaxed" style="">We work on a value-based fixed pricing or monthly technical retainer. No hidden overheads or surprise invoices.</p>
+<h4 class="text-xl font-bold text-on-surface mb-3">Investment Model</h4>
+<p class="text-on-surface-variant leading-relaxed">We work on a value-based fixed pricing or monthly technical retainer. No hidden overheads or surprise invoices.</p>
 </div>
-<!-- Inquiry Card 3 -->
 <div class="bg-surface-container p-8 rounded-xl border border-outline-variant/10 hover:border-accent/50 transition-all group">
 <div class="mb-6 flex justify-between items-start">
-<span class="font-mono text-[12px] text-accent" style="">03</span>
-<span class="material-symbols-outlined text-on-surface-variant group-hover:text-accent transition-colors" style="">terminal</span>
+<span class="font-mono text-[12px] text-accent">03</span>
+<span class="material-symbols-outlined text-on-surface-variant group-hover:text-accent transition-colors">terminal</span>
 </div>
-<h4 class="text-xl font-bold text-on-surface mb-3" style="">Tech Stack</h4>
-<p class="text-on-surface-variant leading-relaxed" style="">Agnostic but performance-obsessed. Specialized in Next.js, Rust, and scalable cloud infrastructures.</p>
+<h4 class="text-xl font-bold text-on-surface mb-3">Tech Stack</h4>
+<p class="text-on-surface-variant leading-relaxed">Agnostic but performance-obsessed. Specialized in Next.js, Rust, and scalable cloud infrastructures.</p>
 </div>
 </div>
 </section>
+
 </div>
 </main>
 
-
 <script>
-  const form = document.getElementById('contact-form');
-  const submitBtn = document.getElementById('submit-btn');
-  const successMsg = document.getElementById('success-msg');
-  const errorMsg = document.getElementById('error-msg');
+  const API = 'https://api.kayablue.nl';
+  const MONTH_NAMES = ['January','February','March','April','May','June',
+    'July','August','September','October','November','December'];
 
-  form?.addEventListener('submit', async (e) => {
+  // ── State ──────────────────────────────────────────────────────────────────
+  let state = {
+    year: new Date().getFullYear(),
+    month: new Date().getMonth(), // 0-based
+    selectedDate: '',             // 'YYYY-MM-DD'
+    selectedTime: '',             // 'HH:MM'
+  };
+
+  // ── DOM refs ───────────────────────────────────────────────────────────────
+  const calendarGrid  = document.getElementById('calendar-grid')!;
+  const monthLabel    = document.getElementById('month-label')!;
+  const prevMonthBtn  = document.getElementById('prev-month')!;
+  const nextMonthBtn  = document.getElementById('next-month')!;
+  const slotsLabel    = document.getElementById('slots-label')!;
+  const slotsLoading  = document.getElementById('slots-loading')!;
+  const slotsGrid     = document.getElementById('slots-grid')!;
+  const noSlotsMsg    = document.getElementById('no-slots-msg')!;
+  const form          = document.getElementById('contact-form') as HTMLFormElement;
+  const submitBtn     = document.getElementById('submit-btn') as HTMLButtonElement;
+  const successMsg    = document.getElementById('success-msg')!;
+  const errorMsg      = document.getElementById('error-msg')!;
+  const hiddenDate    = document.getElementById('selected-date') as HTMLInputElement;
+  const hiddenTime    = document.getElementById('selected-time') as HTMLInputElement;
+
+  // ── Helpers ────────────────────────────────────────────────────────────────
+  function todayStr(): string {
+    // Returns YYYY-MM-DD in browser local time (intentional: the Worker is
+    // authoritative for all date validation; the calendar is UI-only).
+    const d = new Date();
+    return `${d.getFullYear()}-${String(d.getMonth()+1).padStart(2,'0')}-${String(d.getDate()).padStart(2,'0')}`;
+  }
+
+  function toDateStr(year: number, month: number, day: number): string {
+    return `${year}-${String(month+1).padStart(2,'0')}-${String(day).padStart(2,'0')}`;
+  }
+
+  function formatDisplayDate(dateStr: string): string {
+    const [y, m, d] = dateStr.split('-').map(Number);
+    const date = new Date(y, m-1, d);
+    return date.toLocaleDateString('en-GB', { weekday: 'short', day: 'numeric', month: 'short' });
+  }
+
+  // ── Calendar render ────────────────────────────────────────────────────────
+  function renderCalendar() {
+    const { year, month, selectedDate } = state;
+    monthLabel.textContent = `${MONTH_NAMES[month]} ${year}`;
+
+    const today = todayStr();
+    const firstDay = new Date(year, month, 1).getDay(); // 0=Sun
+    // Convert to Mon-first: Sun=6, Mon=0, Tue=1 ...
+    const startOffset = (firstDay === 0) ? 6 : firstDay - 1;
+    const daysInMonth = new Date(year, month + 1, 0).getDate();
+
+    calendarGrid.innerHTML = '';
+
+    // Leading empty cells
+    for (let i = 0; i < startOffset; i++) {
+      const cell = document.createElement('div');
+      cell.className = 'aspect-square';
+      calendarGrid.appendChild(cell);
+    }
+
+    for (let day = 1; day <= daysInMonth; day++) {
+      const dateStr = toDateStr(year, month, day);
+      const dow = new Date(year, month, day).getDay(); // 0=Sun,6=Sat
+      const isWeekend = dow === 0 || dow === 6;
+      const isPast = dateStr < today;
+      const isSelected = dateStr === selectedDate;
+      const isDisabled = isWeekend || isPast;
+
+      const cell = document.createElement('div');
+      cell.textContent = String(day);
+      cell.className = 'aspect-square flex items-center justify-center rounded-lg text-xs font-medium transition-all ';
+
+      if (isSelected) {
+        cell.className += 'bg-accent text-primary font-bold';
+      } else if (isDisabled) {
+        cell.className += 'text-on-surface-variant/30 cursor-default';
+      } else {
+        cell.className += 'bg-surface-container-highest text-on-surface cursor-pointer hover:border hover:border-accent';
+        cell.addEventListener('click', () => onDayClick(dateStr));
+      }
+
+      calendarGrid.appendChild(cell);
+    }
+
+    // Prev month button: disable if we're at current month
+    const nowDate = new Date();
+    const isPrevDisabled = year === nowDate.getFullYear() && month === nowDate.getMonth();
+    (prevMonthBtn as HTMLButtonElement).disabled = isPrevDisabled;
+    prevMonthBtn.classList.toggle('opacity-30', isPrevDisabled);
+    prevMonthBtn.classList.toggle('cursor-not-allowed', isPrevDisabled);
+  }
+
+  // ── Slot fetch & render ────────────────────────────────────────────────────
+  async function onDayClick(dateStr: string) {
+    state.selectedDate = dateStr;
+    state.selectedTime = '';
+    hiddenDate.value = dateStr;
+    hiddenTime.value = '';
+    updateSubmitBtn();
+    renderCalendar();
+
+    // Show loading
+    slotsLabel.textContent = formatDisplayDate(dateStr);
+    slotsLabel.classList.remove('hidden');
+    slotsLoading.classList.remove('hidden');
+    slotsGrid.innerHTML = '';
+    noSlotsMsg.classList.add('hidden');
+
+    try {
+      const res = await fetch(`${API}/api/slots?date=${dateStr}`);
+      const data = await res.json() as { slots?: string[]; error?: string };
+      slotsLoading.classList.add('hidden');
+
+      if (!res.ok || !data.slots || data.slots.length === 0) {
+        noSlotsMsg.textContent = 'No slots available for this date.';
+        noSlotsMsg.classList.remove('hidden');
+        return;
+      }
+
+      renderSlots(data.slots);
+    } catch {
+      slotsLoading.classList.add('hidden');
+      noSlotsMsg.textContent = 'Could not load slots. Please try again.';
+      noSlotsMsg.classList.remove('hidden');
+    }
+  }
+
+  function renderSlots(slots: string[]) {
+    slotsGrid.innerHTML = '';
+    for (const slot of slots) {
+      const btn = document.createElement('button');
+      btn.type = 'button';
+      btn.textContent = slot;
+      btn.dataset.time = slot;
+      btn.className = 'w-full py-2 rounded-lg border text-sm font-medium transition-colors ' +
+        (state.selectedTime === slot
+          ? 'border-accent bg-accent/20 text-accent font-bold'
+          : 'border-outline-variant text-on-surface hover:bg-surface-container-highest');
+      btn.addEventListener('click', () => onSlotClick(slot));
+      slotsGrid.appendChild(btn);
+    }
+  }
+
+  function onSlotClick(time: string) {
+    state.selectedTime = time;
+    hiddenTime.value = time;
+    updateSubmitBtn();
+    // Re-render slot buttons to update highlight
+    const allBtns = slotsGrid.querySelectorAll('button');
+    allBtns.forEach(btn => {
+      const isSelected = (btn as HTMLButtonElement).dataset.time === time;
+      btn.className = 'w-full py-2 rounded-lg border text-sm font-medium transition-colors ' +
+        (isSelected
+          ? 'border-accent bg-accent/20 text-accent font-bold'
+          : 'border-outline-variant text-on-surface hover:bg-surface-container-highest');
+    });
+  }
+
+  function updateSubmitBtn() {
+    const ready = !!(state.selectedDate && state.selectedTime);
+    submitBtn.disabled = !ready;
+    submitBtn.classList.toggle('opacity-50', !ready);
+    submitBtn.classList.toggle('cursor-not-allowed', !ready);
+    submitBtn.classList.toggle('cursor-pointer', ready);
+  }
+
+  // ── Form submit ────────────────────────────────────────────────────────────
+  form.addEventListener('submit', async (e) => {
     e.preventDefault();
-    if (!form || !submitBtn) return;
+    if (!state.selectedDate || !state.selectedTime) return;
 
     const data = Object.fromEntries(new FormData(form));
 
+    // Honeypot
     if (data.website) {
       form.classList.add('hidden');
-      successMsg?.classList.remove('hidden');
+      successMsg.classList.remove('hidden');
       return;
     }
 
     submitBtn.disabled = true;
-    submitBtn.textContent = 'Sending...';
-    errorMsg?.classList.add('hidden');
+    submitBtn.textContent = 'Booking…';
+    errorMsg.classList.add('hidden');
 
     try {
-      const res = await fetch('https://api.kayablue.nl/api/contact', {
+      const res = await fetch(`${API}/api/bookings`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(data),
       });
+      const json = await res.json() as { success?: boolean; error?: string };
 
-      if (res.ok) {
+      if (res.ok && json.success) {
         form.classList.add('hidden');
-        successMsg?.classList.remove('hidden');
-      } else {
-        const json = await res.json().catch(() => ({}));
-        if (errorMsg) {
-          errorMsg.textContent = json.error || 'Something went wrong. Please try again.';
-          errorMsg.classList.remove('hidden');
-        }
+        calendarGrid.closest('section')!.querySelector('.flex')!.classList.add('hidden');
+        successMsg.classList.remove('hidden');
+      } else if (res.status === 409) {
+        errorMsg.textContent = 'That slot was just taken — please pick another time.';
+        errorMsg.classList.remove('hidden');
+        // Refresh slots for the selected date
+        state.selectedTime = '';
+        hiddenTime.value = '';
+        updateSubmitBtn();
+        if (state.selectedDate) onDayClick(state.selectedDate);
         submitBtn.disabled = false;
-        submitBtn.textContent = 'Send Message';
+        submitBtn.textContent = 'Book a Call';
+      } else {
+        errorMsg.textContent = json.error || 'Something went wrong. Please try again.';
+        errorMsg.classList.remove('hidden');
+        submitBtn.disabled = false;
+        submitBtn.textContent = 'Book a Call';
       }
     } catch {
-      if (errorMsg) {
-        errorMsg.textContent = 'Network error. Please check your connection and try again.';
-        errorMsg.classList.remove('hidden');
-      }
+      errorMsg.textContent = 'Network error. Please check your connection.';
+      errorMsg.classList.remove('hidden');
       submitBtn.disabled = false;
-      submitBtn.textContent = 'Send Message';
+      submitBtn.textContent = 'Book a Call';
     }
   });
+
+  // ── Month navigation ───────────────────────────────────────────────────────
+  prevMonthBtn.addEventListener('click', () => {
+    if (state.month === 0) { state.year--; state.month = 11; }
+    else state.month--;
+    renderCalendar();
+  });
+
+  nextMonthBtn.addEventListener('click', () => {
+    if (state.month === 11) { state.year++; state.month = 0; }
+    else state.month++;
+    renderCalendar();
+  });
+
+  // ── Init ───────────────────────────────────────────────────────────────────
+  renderCalendar();
 </script>
 
 </BaseLayout>
